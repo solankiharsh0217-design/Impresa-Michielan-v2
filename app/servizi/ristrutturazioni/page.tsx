@@ -55,7 +55,7 @@ export default function RistrutturazioniPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <p className="text-xl text-text/80 leading-relaxed mb-12">
-              Gestiamo progetti di ristrutturazione completa chiavi in mano. Dalla progettazione alla realizzazione, utilizziamo materiali certificati di qualità e garantiamo una supervisione completa dall'inizio alla fine dei lavori. Il titolare Donato Michielan è sempre presente in cantiere per assicurare la massima qualità.
+              Gestiamo progetti di ristrutturazione completa chiavi in mano. Dalla progettazione alla realizzazione, utilizziamo materiali certificati di qualità e garantiamo una supervisione completa dall&apos;inizio alla fine dei lavori. Il titolare Donato Michielan è sempre presente in cantiere per assicurare la massima qualità.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">

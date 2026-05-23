@@ -52,7 +52,7 @@ export default function CartongessiPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <p className="text-xl text-text/80 leading-relaxed mb-12">
-              Realizziamo pareti divisorie, controsoffitti e pareti acustiche isolate in cartongesso. Progettiamo soluzioni di design per migliorare il comfort abitativo, l'isolamento acustico e la distribuzione degli spazi interni.
+              Realizziamo pareti divisorie, controsoffitti e pareti acustiche isolate in cartongesso. Progettiamo soluzioni di design per migliorare il comfort abitativo, l&apos;isolamento acustico e la distribuzione degli spazi interni.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">

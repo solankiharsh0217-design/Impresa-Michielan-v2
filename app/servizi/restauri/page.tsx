@@ -57,7 +57,7 @@ export default function RestauriPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <p className="text-xl text-text/80 leading-relaxed mb-12">
-              Con oltre 30 anni di esperienza nel settore, Impresa Michielan è specializzata in restauri e pitture edili di alta qualità. Ci occupiamo di rinnovare facciate per migliorare l'estetica, l'isolamento termico, l'efficienza energetica e la protezione dagli agenti atmosferici. Utilizziamo materiali innovativi per preservare il valore del tuo immobile nel tempo, garantendo risultati duraturi e di qualità superiore.
+              Con oltre 30 anni di esperienza nel settore, Impresa Michielan è specializzata in restauri e pitture edili di alta qualità. Ci occupiamo di rinnovare facciate per migliorare l&apos;estetica, l&apos;isolamento termico, l&apos;efficienza energetica e la protezione dagli agenti atmosferici. Utilizziamo materiali innovativi per preservare il valore del tuo immobile nel tempo, garantendo risultati duraturi e di qualità superiore.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">

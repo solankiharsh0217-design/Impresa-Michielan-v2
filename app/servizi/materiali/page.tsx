@@ -46,7 +46,7 @@ export default function MaterialiPage() {
                 </div>
                 <h3 className="text-3xl font-bold text-primary mb-5">IZONIL</h3>
                 <p className="text-lg text-text/80 leading-relaxed mb-6">
-                  Miscela per intonaco che crea una membrana impermeabile dopo l'applicazione. Ideale per proteggere le pareti dall'umidità di risalita e dalle infiltrazioni d'acqua.
+                  Miscela per intonaco che crea una membrana impermeabile dopo l&apos;applicazione. Ideale per proteggere le pareti dall&apos;umidità di risalita e dalle infiltrazioni d&apos;acqua.
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
@@ -70,7 +70,7 @@ export default function MaterialiPage() {
                 </div>
                 <h3 className="text-3xl font-bold text-primary mb-5">Pannelli in Fibra di Basalto</h3>
                 <p className="text-lg text-text/80 leading-relaxed mb-6">
-                  Soluzione innovativa per l'isolamento termico e acustico degli edifici. Materiale naturale, resistente al fuoco e completamente riciclabile.
+                  Soluzione innovativa per l&apos;isolamento termico e acustico degli edifici. Materiale naturale, resistente al fuoco e completamente riciclabile.
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">

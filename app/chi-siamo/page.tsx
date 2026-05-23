@@ -49,10 +49,10 @@ export default function ChiSiamoPage() {
               <div>
                 <h2 className="text-4xl md:text-5xl font-bold text-primary mb-8">Oltre 30 Anni di Esperienza</h2>
                 <p className="text-xl text-text/80 mb-6 leading-relaxed">
-                  Impresa Michielan è un'azienda edile a conduzione familiare con oltre 30 anni di esperienza nel settore delle costruzioni e ristrutturazioni. Fondata da Donato Michielan, l'impresa si è affermata nel territorio di Scorzè e provincia di Venezia come punto di riferimento per restauri, isolamenti termici, rifacimento tetti e ristrutturazioni complete.
+                  Impresa Michielan è un&apos;azienda edile a conduzione familiare con oltre 30 anni di esperienza nel settore delle costruzioni e ristrutturazioni. Fondata da Donato Michielan, l&apos;impresa si è affermata nel territorio di Scorzè e provincia di Venezia come punto di riferimento per restauri, isolamenti termici, rifacimento tetti e ristrutturazioni complete.
                 </p>
                 <p className="text-xl text-text/80 leading-relaxed">
-                  La nostra filosofia si basa su tre pilastri fondamentali: qualità dei materiali, professionalità nell'esecuzione e presenza costante in cantiere. Ogni progetto è seguito personalmente dal titolare per garantire risultati eccellenti e la massima soddisfazione del cliente.
+                  La nostra filosofia si basa su tre pilastri fondamentali: qualità dei materiali, professionalità nell&apos;esecuzione e presenza costante in cantiere. Ogni progetto è seguito personalmente dal titolare per garantire risultati eccellenti e la massima soddisfazione del cliente.
                 </p>
               </div>
               <div className="relative">
