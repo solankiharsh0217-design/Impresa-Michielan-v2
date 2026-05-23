@@ -137,54 +137,35 @@ export default function HomePage() {
         
         <div className="relative z-10 container mx-auto px-4 py-8 mt-20 max-h-screen overflow-y-auto">
           <div className="max-w-4xl animate-fade-in-up">
-            <div className="inline-block bg-cta/20 backdrop-blur-sm px-4 py-2 rounded-full mb-4 border border-cta/30">
-              <span className="text-xs md:text-sm font-semibold flex items-center gap-2">
-                <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                Oltre 30 anni di eccellenza • 500+ clienti soddisfatti
-              </span>
-            </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
               Trasformiamo<br />la Tua Casa
             </h1>
-            <p className="text-xl md:text-2xl lg:text-3xl mb-3 text-white/90 font-light">
+            <p className="text-2xl md:text-3xl mb-8 text-white/90 font-light">
               in un ambiente salubre e sostenibile
             </p>
-            <p className="text-base md:text-lg mb-6 text-white/80 max-w-2xl leading-relaxed">
-              Impresa edile certificata SOA23 specializzata in restauri, isolamenti e ristrutturazioni complete.
+            <p className="text-lg md:text-xl mb-10 text-white/80 max-w-2xl leading-relaxed">
+              Oltre 30 anni di esperienza in restauri, isolamenti e ristrutturazioni complete con materiali certificati.
             </p>
-            
-            {/* Urgency Elements */}
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 mb-6 border border-white/20">
-              <p className="text-base font-semibold mb-3">🎯 Offerta Limitata:</p>
-              <ul className="space-y-1.5">
-                {urgencyReasons.map((reason, index) => (
-                  <li key={index} className="flex items-center gap-2 text-sm text-white/90">
-                    <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                    {reason}
-                  </li>
-                ))}
-              </ul>
-            </div>
 
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row gap-4 mb-6">
               <button
                 onClick={() => setContactModalOpen(true)}
-                className="group bg-cta hover:bg-cta/90 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 animate-pulse"
+                className="group bg-cta hover:bg-cta/90 text-white px-10 py-5 rounded-xl text-xl font-bold transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-3"
               >
-                <Phone className="w-5 h-5" />
-                Sopralluogo GRATUITO
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <Phone className="w-6 h-6" />
+                Sopralluogo Gratuito
+                <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </button>
               <a
                 href="tel:+393463482617"
-                className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 hover:scale-105 border-2 border-white/30 flex items-center justify-center gap-2"
+                className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-10 py-5 rounded-xl text-xl font-semibold transition-all duration-300 hover:scale-105 border-2 border-white/30 flex items-center justify-center gap-3"
               >
-                <Phone className="w-5 h-5" />
-                Chiama Ora
+                <Phone className="w-6 h-6" />
+                +39 346 348 2617
               </a>
             </div>
             
-            <p className="text-xs md:text-sm text-white/60 mt-4">✓ Nessun impegno • ✓ Preventivo gratuito • ✓ Risposta entro 24h</p>
+            <p className="text-sm text-white/70">✓ Preventivo gratuito • ✓ Risposta in 24h • ✓ Certificazione SOA23</p>
           </div>
         </div>
 
