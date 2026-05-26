@@ -34,7 +34,7 @@ export default function TettiPage() {
     <>
       <section className="relative h-[500px] flex items-center justify-center text-white overflow-hidden mt-36">
         <Image
-          src="https://www.impresamichielan.com/wp-content/uploads/2025/11/rifacimento-tetti-1-scaled.jpg"
+          src="https://images.unsplash.com/photo-1763665814605-a6489a3bf2a0?auto=format&fit=crop&w=1600&q=80"
           alt="Rifacimento Tetti"
           fill
           className="object-cover"

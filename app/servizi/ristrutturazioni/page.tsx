@@ -34,7 +34,7 @@ export default function RistrutturazioniPage() {
     <>
       <section className="relative h-[500px] flex items-center justify-center text-white overflow-hidden mt-36">
         <Image
-          src="https://www.impresamichielan.com/wp-content/uploads/2025/11/SFONDO-HOME-IMPRESA-MICHIELAN.jpg"
+          src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?auto=format&fit=crop&w=1600&q=80"
           alt="Ristrutturazioni Complete"
           fill
           className="object-cover"

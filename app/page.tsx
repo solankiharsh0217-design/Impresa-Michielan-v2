@@ -30,7 +30,7 @@ export default function HomePage() {
     {
       title: 'Restauri e Pitture Edili',
       description: 'Rinnovamento facciate con materiali innovativi per estetica, isolamento ed efficienza energetica',
-      image: 'https://www.impresamichielan.com/wp-content/uploads/2025/12/impresa-michielan.jpeg',
+      image: 'https://images.unsplash.com/photo-1534161919789-69eb71e62291?auto=format&fit=crop&w=1200&q=80',
       link: '/servizi/restauri',
       features: ['Facciate esterne', 'Pitture interne', 'Materiali certificati'],
       icon: HomeIcon
@@ -38,7 +38,7 @@ export default function HomePage() {
     {
       title: 'Isolamenti e Cappotti',
       description: 'Soluzioni a basso spessore per isolamento termico, risparmio energetico e comfort abitativo',
-      image: 'https://www.impresamichielan.com/wp-content/uploads/2025/11/logo-casetta.png',
+      image: 'https://images.unsplash.com/photo-1779031149884-bd80eed1e275?auto=format&fit=crop&w=1200&q=80',
       link: '/servizi/isolamenti',
       features: ['Cappotti termici', 'Anti-umidità', 'Risparmio energetico'],
       icon: Shield
@@ -46,7 +46,7 @@ export default function HomePage() {
     {
       title: 'Rifacimento Tetti',
       description: 'Ristrutturazione completa con tegole, coppi o lamiera coibentata e impermeabilizzazioni',
-      image: 'https://www.impresamichielan.com/wp-content/uploads/2025/11/rifacimento-tetti-1-scaled.jpg',
+      image: 'https://images.unsplash.com/photo-1605450099279-533bd3ce379a?auto=format&fit=crop&w=1200&q=80',
       link: '/servizi/tetti',
       features: ['Tetti tradizionali', 'Impermeabilizzazioni', 'Lattoneria'],
       icon: HomeIcon
@@ -54,7 +54,7 @@ export default function HomePage() {
     {
       title: 'Cartongessi',
       description: 'Pareti divisorie, controsoffitti e soluzioni acustiche per spazi moderni e funzionali',
-      image: 'https://www.impresamichielan.com/wp-content/uploads/2025/11/controsoffitti.jpg',
+      image: 'https://images.unsplash.com/photo-1768321917661-d4f1a89d2185?auto=format&fit=crop&w=1200&q=80',
       link: '/servizi/cartongessi',
       features: ['Pareti divisorie', 'Controsoffitti', 'Isolamento acustico'],
       icon: HomeIcon
@@ -70,7 +70,7 @@ export default function HomePage() {
     {
       title: 'Ristrutturazioni Complete',
       description: 'Progetti chiavi in mano con supervisione totale dalla progettazione alla consegna',
-      image: 'https://www.impresamichielan.com/wp-content/uploads/2025/11/SFONDO-HOME-IMPRESA-MICHIELAN.jpg',
+      image: 'https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?auto=format&fit=crop&w=1200&q=80',
       link: '/servizi/ristrutturazioni',
       features: ['Chiavi in mano', 'Supervisione totale', 'Materiali certificati'],
       icon: Award
@@ -126,20 +126,26 @@ export default function HomePage() {
     {
       title: 'Restauro Facciata Esterna',
       description: 'Pulizia con idropulitrice ad alta pressione, trattamento anti-umidità e tinteggiatura con materiali innovativi per un risultato duraturo.',
-      image: 'https://www.impresamichielan.com/wp-content/uploads/2025/12/impresa-michielan.jpeg',
+      // Weathered degraded building → restored Venetian facade (Venice, Italy)
+      imageBefore: 'https://images.unsplash.com/photo-1771337744364-e7dd00c2921c?auto=format&fit=crop&w=800&q=80',
+      imageAfter: 'https://images.unsplash.com/photo-1534161919789-69eb71e62291?auto=format&fit=crop&w=800&q=80',
       tag: 'Restauro'
     },
     {
       title: 'Rifacimento Copertura',
       description: 'Sostituzione completa del manto di copertura con nuove tegole, isolamento termico e impermeabilizzazione professionale.',
-      image: 'https://www.impresamichielan.com/wp-content/uploads/2025/11/rifacimento-tetti-scorze-scaled.jpg',
+      // Old grey deteriorated roof → new brown Italian terracotta tiles (Jesi, Italy)
+      imageBefore: 'https://images.unsplash.com/photo-1673645652590-9d21295bf4ac?auto=format&fit=crop&w=800&q=80',
+      imageAfter: 'https://images.unsplash.com/photo-1605450099279-533bd3ce379a?auto=format&fit=crop&w=800&q=80',
       tag: 'Tetto'
     },
     {
-      title: 'Risanamento Terrazza',
-      description: 'Rimozione vecchia pavimentazione, impermeabilizzazione profonda e posa di nuovo rivestimento resistente agli agenti atmosferici.',
-      image: 'https://www.impresamichielan.com/wp-content/uploads/2025/11/risanamento-terrazza-scaled.jpg',
-      tag: 'Terrazza'
+      title: 'Ristrutturazione Interna',
+      description: 'Demolizione e bonifica degli spazi, rifacimento completo con nuovi impianti, isolamento e finiture di qualità.',
+      // Before: empty shell under demolition → After: structural renovation in progress
+      imageBefore: 'https://images.unsplash.com/photo-1634586648651-f1fb9ec10d90?auto=format&fit=crop&w=800&q=80',
+      imageAfter: 'https://images.unsplash.com/photo-1768321917661-d4f1a89d2185?auto=format&fit=crop&w=800&q=80',
+      tag: 'Ristrutturazione'
     },
   ]
 
@@ -343,39 +349,36 @@ export default function HomePage() {
                 className="group rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 bg-background hover:-translate-y-2 animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
-                {/* Split before/after image */}
-                <div className="relative h-80 overflow-hidden">
-                  {/* PRIMA layer — full image, desaturated + darkened */}
-                  <div className="absolute inset-0">
+                {/* Split before/after — two genuinely different photos */}
+                <div className="relative h-80 overflow-hidden flex">
+                  {/* Left half: PRIMA */}
+                  <div className="relative w-1/2 overflow-hidden flex-shrink-0">
                     <Image
-                      src={item.image}
+                      src={item.imageBefore}
                       alt={`Prima — ${item.title}`}
                       fill
-                      className="object-cover grayscale brightness-50"
+                      className="object-cover"
                     />
+                    <div className="absolute inset-0 bg-black/20" />
+                    <div className="absolute bottom-4 left-4 z-10 bg-black/80 text-white text-xs px-3 py-1.5 rounded-full font-bold tracking-wider">PRIMA</div>
                   </div>
 
-                  {/* DOPO layer — full image, color, clipped to right half via clipPath */}
-                  <div className="absolute inset-0" style={{ clipPath: 'inset(0 0 0 50%)' }}>
-                    <div className="absolute inset-0">
-                      <Image
-                        src={item.image}
-                        alt={`Dopo — ${item.title}`}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
+                  {/* Right half: DOPO */}
+                  <div className="relative w-1/2 overflow-hidden flex-shrink-0">
+                    <Image
+                      src={item.imageAfter}
+                      alt={`Dopo — ${item.title}`}
+                      fill
+                      className="object-cover"
+                    />
+                    <div className="absolute bottom-4 right-4 z-10 bg-cta text-white text-xs px-3 py-1.5 rounded-full font-bold tracking-wider">DOPO</div>
                   </div>
 
                   {/* Center divider */}
-                  <div className="absolute top-0 left-1/2 w-[2px] h-full bg-white z-20 -translate-x-px shadow-[0_0_8px_rgba(255,255,255,0.6)]"></div>
+                  <div className="absolute top-0 left-1/2 w-[3px] h-full bg-white z-20 -translate-x-px shadow-[0_0_10px_rgba(255,255,255,0.8)]" />
 
-                  {/* Labels */}
-                  <div className="absolute bottom-4 left-4 z-30 bg-black/80 text-white text-xs px-3 py-1.5 rounded-full font-bold tracking-wider">PRIMA</div>
-                  <div className="absolute bottom-4 right-4 z-30 bg-cta text-white text-xs px-3 py-1.5 rounded-full font-bold tracking-wider">DOPO</div>
-
-                  {/* Category tag */}
-                  <div className="absolute top-4 left-1/2 -translate-x-1/2 z-30 bg-white/90 backdrop-blur-sm text-primary text-xs px-4 py-1.5 rounded-full font-bold shadow-md">
+                  {/* Category tag centered on divider */}
+                  <div className="absolute top-4 left-1/2 -translate-x-1/2 z-30 bg-white/90 backdrop-blur-sm text-primary text-xs px-4 py-1.5 rounded-full font-bold shadow-md whitespace-nowrap">
                     {item.tag}
                   </div>
                 </div>

@@ -31,7 +31,7 @@ export default function IsolamentiPage() {
     <>
       <section className="relative h-[500px] flex items-center justify-center text-white overflow-hidden mt-36">
         <Image
-          src="https://www.impresamichielan.com/wp-content/uploads/2025/11/logo-casetta.png"
+          src="https://images.unsplash.com/photo-1779031149884-bd80eed1e275?auto=format&fit=crop&w=1600&q=80"
           alt="Isolamenti e Cappotti"
           fill
           className="object-cover"

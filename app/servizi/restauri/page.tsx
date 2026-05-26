@@ -35,7 +35,7 @@ export default function RestauriPage() {
       {/* Hero */}
       <section className="relative h-[500px] flex items-center justify-center text-white overflow-hidden mt-36">
         <Image
-          src="https://www.impresamichielan.com/wp-content/uploads/2025/12/impresa-michielan.jpeg"
+          src="https://images.unsplash.com/photo-1779031149884-bd80eed1e275?auto=format&fit=crop&w=1600&q=80"
           alt="Restauri e Pitture Edili"
           fill
           className="object-cover"
@@ -95,7 +95,7 @@ export default function RestauriPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
               <Image
-                src="https://www.impresamichielan.com/wp-content/uploads/2025/12/impresa-michielan.jpeg"
+                src="https://images.unsplash.com/photo-1534161919789-69eb71e62291?auto=format&fit=crop&w=900&q=80"
                 alt="Progetto Restauro 1"
                 fill
                 className="object-cover hover:scale-110 transition-transform duration-500"
@@ -103,7 +103,7 @@ export default function RestauriPage() {
             </div>
             <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
               <Image
-                src="https://www.impresamichielan.com/wp-content/uploads/2025/11/SFONDO-HOME-IMPRESA-MICHIELAN.jpg"
+                src="https://images.unsplash.com/photo-1771337744364-e7dd00c2921c?auto=format&fit=crop&w=900&q=80"
                 alt="Progetto Restauro 2"
                 fill
                 className="object-cover hover:scale-110 transition-transform duration-500"

@@ -7,6 +7,14 @@ const nextConfig = {
         hostname: 'www.impresamichielan.com',
         pathname: '/wp-content/uploads/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'plus.unsplash.com',
+      },
     ],
   },
   typescript: {

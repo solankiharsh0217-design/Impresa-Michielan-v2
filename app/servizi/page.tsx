@@ -16,7 +16,7 @@ export default function ServiziPage() {
       icon: Home,
       title: 'Restauri e Pitture Edili',
       shortDesc: 'Oltre 30 anni di esperienza in restauri e pitture edili per facciate e interni',
-      image: 'https://www.impresamichielan.com/wp-content/uploads/2025/12/impresa-michielan.jpeg',
+      image: 'https://images.unsplash.com/photo-1534161919789-69eb71e62291?auto=format&fit=crop&w=1200&q=80',
       link: '/servizi/restauri'
     },
     {
@@ -24,7 +24,7 @@ export default function ServiziPage() {
       icon: Shield,
       title: 'Isolamenti e Cappotti',
       shortDesc: 'Soluzioni innovative a basso spessore per isolamento termico ed efficienza energetica',
-      image: 'https://www.impresamichielan.com/wp-content/uploads/2025/11/logo-casetta.png',
+      image: 'https://images.unsplash.com/photo-1779031149884-bd80eed1e275?auto=format&fit=crop&w=1200&q=80',
       link: '/servizi/isolamenti'
     },
     {
@@ -32,7 +32,7 @@ export default function ServiziPage() {
       icon: Hammer,
       title: 'Rifacimento Tetti e Terrazzi',
       shortDesc: 'Ristrutturazione completa di tetti, terrazzi e impermeabilizzazioni',
-      image: 'https://www.impresamichielan.com/wp-content/uploads/2025/11/rifacimento-tetti-1-scaled.jpg',
+      image: 'https://images.unsplash.com/photo-1605450099279-533bd3ce379a?auto=format&fit=crop&w=1200&q=80',
       link: '/servizi/tetti'
     },
     {
@@ -40,7 +40,7 @@ export default function ServiziPage() {
       icon: Layers,
       title: 'Cartongessi e Contropareti',
       shortDesc: 'Pareti divisorie, controsoffitti e soluzioni acustiche in cartongesso',
-      image: 'https://www.impresamichielan.com/wp-content/uploads/2025/11/controsoffitti.jpg',
+      image: 'https://images.unsplash.com/photo-1768321917661-d4f1a89d2185?auto=format&fit=crop&w=1200&q=80',
       link: '/servizi/cartongessi'
     },
     {
@@ -56,7 +56,7 @@ export default function ServiziPage() {
       icon: Key,
       title: 'Ristrutturazioni Complete Chiavi in Mano',
       shortDesc: 'Progetti chiavi in mano con supervisione completa dall\'inizio alla fine',
-      image: 'https://www.impresamichielan.com/wp-content/uploads/2025/11/SFONDO-HOME-IMPRESA-MICHIELAN.jpg',
+      image: 'https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?auto=format&fit=crop&w=1200&q=80',
       link: '/servizi/ristrutturazioni'
     },
   ]
