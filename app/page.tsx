@@ -158,7 +158,7 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/85 to-black/70" />
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 py-8 mt-28 max-h-screen overflow-y-auto">
+        <div className="relative z-10 container mx-auto px-4 py-8 mt-36 max-h-screen overflow-y-auto">
           <div className="max-w-4xl animate-fade-in-up">
             {/* Headline — made larger per client request */}
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-4 leading-tight">
@@ -450,22 +450,13 @@ export default function HomePage() {
       </section>
 
       {/* ─── BASALTEK Section ─────────────────────────────────────────────────── */}
-      <section className="py-24 relative overflow-hidden">
-        {/* Background image with heavy dark overlay */}
-        <div className="absolute inset-0">
-          <Image
-            src="https://www.impresamichielan.com/wp-content/uploads/2025/11/SFONDO-HOME-IMPRESA-MICHIELAN.jpg"
-            alt="BASALTEK background"
-            fill
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-950/97 via-gray-900/95 to-primary/90"></div>
-        </div>
+      {/* Solid dark background — no image bleed-through, guaranteed readability */}
+      <section className="py-24 bg-gray-950 relative overflow-hidden">
 
-        {/* Decorative blobs */}
-        <div className="absolute inset-0 opacity-15 pointer-events-none">
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-cta rounded-full blur-[120px]"></div>
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary rounded-full blur-[100px]"></div>
+        {/* Subtle decorative colour blobs */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-cta/20 rounded-full blur-[140px]"></div>
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/40 rounded-full blur-[120px]"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -474,29 +465,29 @@ export default function HomePage() {
 
               {/* Left — headline + description + CTAs */}
               <div className="text-white">
-                <span className="inline-block text-cta font-semibold text-sm uppercase tracking-[0.2em] mb-5 border border-cta/40 px-4 py-1.5 rounded-full">
+                <span className="inline-block text-cta font-semibold text-sm uppercase tracking-[0.2em] mb-5 border border-cta/50 px-4 py-1.5 rounded-full">
                   Materiale Esclusivo
                 </span>
-                <h2 className="text-7xl md:text-8xl font-black mb-4 leading-none tracking-tight">
+                <h2 className="text-7xl md:text-8xl font-black mb-4 leading-none tracking-tight text-white">
                   BASALTEK
                 </h2>
-                <p className="text-2xl text-white/70 mb-6 font-light">
+                <p className="text-2xl text-white/85 mb-6 font-light">
                   La fibra di basalto per l&apos;edilizia del futuro
                 </p>
-                <p className="text-lg text-white/60 mb-10 leading-relaxed">
+                <p className="text-lg text-white/75 mb-10 leading-relaxed">
                   BASALTEK è un sistema costruttivo rivoluzionario in fibra di basalto vulcanico. Superiore all&apos;acciaio in resistenza, quattro volte più leggero, incombustibile e completamente eco-sostenibile. Impresa Michielan è uno dei pochi applicatori certificati nella provincia di Venezia.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href="/servizi/materiali"
-                    className="bg-cta text-white px-8 py-4 rounded-xl font-semibold hover:bg-cta/90 hover:scale-105 transition-all duration-300 inline-flex items-center justify-center gap-3 shadow-lg shadow-cta/30"
+                    className="bg-cta text-white px-8 py-4 rounded-xl font-semibold hover:bg-cta/90 hover:scale-105 transition-all duration-300 inline-flex items-center justify-center gap-3 shadow-lg shadow-cta/40"
                   >
                     Scopri BASALTEK
                     <ArrowRight className="w-5 h-5" />
                   </Link>
                   <button
                     onClick={() => setContactModalOpen(true)}
-                    className="border-2 border-white/25 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 hover:border-white/50 hover:scale-105 transition-all duration-300"
+                    className="border-2 border-white/40 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 hover:border-white/70 hover:scale-105 transition-all duration-300"
                   >
                     Richiedi Informazioni
                   </button>
@@ -508,13 +499,13 @@ export default function HomePage() {
                 {basaltekFeatures.map((feature, index) => (
                   <div
                     key={index}
-                    className="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
+                    className="bg-white/8 p-6 rounded-2xl border border-white/15 hover:bg-white/12 hover:border-white/30 transition-all duration-300 group"
                   >
-                    <div className="w-12 h-12 bg-cta/15 rounded-xl flex items-center justify-center mb-4 group-hover:bg-cta/25 transition-colors duration-300">
+                    <div className="w-12 h-12 bg-cta/25 rounded-xl flex items-center justify-center mb-4 group-hover:bg-cta/40 transition-colors duration-300">
                       <feature.icon className="w-6 h-6 text-cta" />
                     </div>
                     <h3 className="text-white font-bold mb-2 text-sm">{feature.title}</h3>
-                    <p className="text-white/50 text-xs leading-relaxed">{feature.description}</p>
+                    <p className="text-white/70 text-xs leading-relaxed">{feature.description}</p>
                   </div>
                 ))}
               </div>

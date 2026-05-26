@@ -143,14 +143,14 @@ export default function OperePage() {
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-br from-primary/90 to-black/70" />
-        <div className="relative z-10 container mx-auto px-4 text-center mt-28">
+        <div className="relative z-10 container mx-auto px-4 text-center mt-36">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">Le Nostre Opere</h1>
           <p className="text-2xl text-white/90 max-w-3xl mx-auto">Scopri i nostri progetti realizzati con passione e professionalità</p>
         </div>
       </section>
 
       {/* Filter Buttons */}
-      <section className="py-12 bg-white sticky top-28 z-40 border-b shadow-sm">
+      <section className="py-12 bg-white sticky top-36 z-40 border-b shadow-sm">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((cat) => (

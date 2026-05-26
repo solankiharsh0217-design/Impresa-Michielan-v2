@@ -35,7 +35,7 @@ export default function ChiSiamoPage() {
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-br from-primary/90 to-black/70" />
-        <div className="relative z-10 container mx-auto px-4 text-center mt-28">
+        <div className="relative z-10 container mx-auto px-4 text-center mt-36">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">Chi Siamo</h1>
           <p className="text-2xl text-white/90 max-w-3xl mx-auto">Una storia di famiglia, passione e dedizione al lavoro ben fatto</p>
         </div>
