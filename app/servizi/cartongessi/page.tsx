@@ -29,7 +29,7 @@ export default function CartongessiPage() {
 
   return (
     <>
-      <section className="relative h-[500px] flex items-center justify-center text-white overflow-hidden mt-20">
+      <section className="relative h-[500px] flex items-center justify-center text-white overflow-hidden mt-28">
         <Image
           src="https://www.impresamichielan.com/wp-content/uploads/2025/11/controsoffitti.jpg"
           alt="Cartongessi"

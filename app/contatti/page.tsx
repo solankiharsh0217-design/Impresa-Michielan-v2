@@ -32,7 +32,7 @@ export default function ContattiPage() {
           <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
         </div>
-        <div className="relative z-10 container mx-auto px-4 text-center mt-20">
+        <div className="relative z-10 container mx-auto px-4 text-center mt-28">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">Contattaci</h1>
           <p className="text-2xl text-white/90 max-w-3xl mx-auto">Siamo a tua disposizione per qualsiasi informazione o per richiedere un sopralluogo gratuito</p>
         </div>

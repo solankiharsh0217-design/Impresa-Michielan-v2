@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, CheckCircle, Users, Building2, Award, TrendingUp, Phone, Mail, Star, Shield, Clock, ThumbsUp, Zap, Home as HomeIcon } from 'lucide-react'
+import { ArrowRight, CheckCircle, Users, Building2, Award, TrendingUp, Phone, Star, Shield, Clock, ThumbsUp, Zap, Home as HomeIcon, Flame, Leaf, Droplets, Layers } from 'lucide-react'
 import ContactModal from '@/components/ContactModal'
 
 export default function HomePage() {
@@ -78,27 +78,27 @@ export default function HomePage() {
   ]
 
   const testimonials = [
-    { 
-      name: 'Miatto Massimiliano', 
-      location: 'Gardigiano', 
+    {
+      name: 'Miatto Massimiliano',
+      location: 'Gardigiano',
       text: 'Il titolare Sig. Donato si è dimostrato molto attento e disponibile alle nostre necessità, utilizzando personale competente e mezzi idonei per portare a termine i lavori nei tempi richiesti.',
       rating: 5
     },
-    { 
-      name: 'Rizzato Michele', 
-      location: 'Olmo di Martellago', 
+    {
+      name: 'Rizzato Michele',
+      location: 'Olmo di Martellago',
       text: 'Siamo stati seguiti da persone competenti e preparate. È stato rispettato il preventivo che ci è stato fatto, sia come costi che come tempi di inizio e fine lavori.',
       rating: 5
     },
-    { 
-      name: 'Crivellari Avellino', 
-      location: 'Calcroci di Camponogara', 
+    {
+      name: 'Crivellari Avellino',
+      location: 'Calcroci di Camponogara',
       text: 'Il titolare Donato è molto disponibile e competente. Ho particolarmente apprezzato la sua presenza quasi costante in cantiere per dirigere e controllare i lavori.',
       rating: 5
     },
-    { 
-      name: 'Zottarel Lina e Barzan Danilo', 
-      location: 'Treviso', 
+    {
+      name: 'Zottarel Lina e Barzan Danilo',
+      location: 'Treviso',
       text: 'I risultati sono evidenti: il confort è molto migliorato sia per la temperatura sia per l\'aria più salubre. SI RESPIRA UNA ATMOSFERA DI BENESSERE OVUNQUE.',
       rating: 5
     },
@@ -113,16 +113,39 @@ export default function HomePage() {
     { icon: Zap, title: 'Soluzioni Innovative', description: 'Tecnologie e materiali all\'avanguardia' },
   ]
 
-  const urgencyReasons = [
-    'Sopralluogo gratuito disponibile questa settimana',
-    'Preventivo dettagliato entro 24 ore',
-    'Materiali certificati con garanzia',
-    'Pagamento flessibile e trasparente'
+  const basaltekFeatures = [
+    { icon: Droplets, title: 'Impermeabilità Totale', description: 'Protezione definitiva dall\'umidità e dalle infiltrazioni d\'acqua' },
+    { icon: Shield, title: 'Isolamento Termico', description: 'Riduce i consumi energetici fino al 40% grazie all\'isolamento superiore' },
+    { icon: Flame, title: 'Resistenza al Fuoco', description: 'Classificazione A1: materiale incombustibile per la massima sicurezza' },
+    { icon: Leaf, title: 'Eco-Sostenibile', description: 'Origine vulcanica naturale, 100% riciclabile e a bassa impronta carbonica' },
+    { icon: Zap, title: 'Durata Eccezionale', description: 'Resiste da -200°C a +700°C senza deteriorarsi nel tempo' },
+    { icon: Layers, title: 'Ultra Leggero', description: 'Quattro volte più leggero dell\'acciaio, ideale per qualsiasi struttura' },
+  ]
+
+  const beforeAfterProjects = [
+    {
+      title: 'Restauro Facciata Esterna',
+      description: 'Pulizia con idropulitrice ad alta pressione, trattamento anti-umidità e tinteggiatura con materiali innovativi per un risultato duraturo.',
+      image: 'https://www.impresamichielan.com/wp-content/uploads/2025/12/impresa-michielan.jpeg',
+      tag: 'Restauro'
+    },
+    {
+      title: 'Rifacimento Copertura',
+      description: 'Sostituzione completa del manto di copertura con nuove tegole, isolamento termico e impermeabilizzazione professionale.',
+      image: 'https://www.impresamichielan.com/wp-content/uploads/2025/11/rifacimento-tetti-scorze-scaled.jpg',
+      tag: 'Tetto'
+    },
+    {
+      title: 'Risanamento Terrazza',
+      description: 'Rimozione vecchia pavimentazione, impermeabilizzazione profonda e posa di nuovo rivestimento resistente agli agenti atmosferici.',
+      image: 'https://www.impresamichielan.com/wp-content/uploads/2025/11/risanamento-terrazza-scaled.jpg',
+      tag: 'Terrazza'
+    },
   ]
 
   return (
     <>
-      {/* Hero Section - Conversion Focused */}
+      {/* ─── Hero ─────────────────────────────────────────────────────────────── */}
       <section className="relative h-screen flex items-center justify-center text-white overflow-hidden">
         <div className="absolute inset-0">
           <Image
@@ -134,17 +157,19 @@ export default function HomePage() {
           />
           <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/85 to-black/70" />
         </div>
-        
-        <div className="relative z-10 container mx-auto px-4 py-8 mt-20 max-h-screen overflow-y-auto">
+
+        <div className="relative z-10 container mx-auto px-4 py-8 mt-28 max-h-screen overflow-y-auto">
           <div className="max-w-4xl animate-fade-in-up">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+            {/* Headline — made larger per client request */}
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-4 leading-tight">
               Trasformiamo<br />la Tua Casa
             </h1>
-            <p className="text-2xl md:text-3xl mb-8 text-white/90 font-light">
+            {/* Subtitle — also enlarged */}
+            <p className="text-3xl md:text-4xl mb-8 text-white/90 font-light">
               in un ambiente salubre e sostenibile
             </p>
             <p className="text-lg md:text-xl mb-10 text-white/80 max-w-2xl leading-relaxed">
-              Oltre 30 anni di esperienza in restauri, isolamenti e ristrutturazioni complete con materiali certificati.
+              Oltre <strong className="font-bold text-white">30 anni di esperienza</strong> in restauri, isolamenti e ristrutturazioni complete con materiali certificati.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-6">
@@ -164,12 +189,12 @@ export default function HomePage() {
                 +39 346 348 2617
               </a>
             </div>
-            
+
             <p className="text-sm text-white/70">✓ Preventivo gratuito • ✓ Risposta in 24h • ✓ Certificazione SOA23</p>
           </div>
         </div>
 
-        {/* Scroll Indicator */}
+        {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-2">
             <div className="w-1 h-3 bg-white/50 rounded-full"></div>
@@ -177,7 +202,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Trust Badges */}
+      {/* ─── Trust Badges ─────────────────────────────────────────────────────── */}
       <section className="py-8 bg-white border-b">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap items-center justify-center gap-8 text-center">
@@ -201,28 +226,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-b from-white to-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">I Numeri Parlano Chiaro</h2>
-            <p className="text-xl text-text/70">La fiducia dei nostri clienti è il nostro successo</p>
-          </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className={`w-24 h-24 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                  <stat.icon className="w-12 h-12 text-white" />
-                </div>
-                <div className="text-5xl md:text-6xl font-bold text-primary mb-3">{stat.value}</div>
-                <div className="text-text/70 font-medium text-lg">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Grid */}
+      {/* ─── Services Grid (moved before Stats) ───────────────────────────────── */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in-up">
@@ -276,31 +280,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-5xl md:text-6xl font-bold text-primary mb-6">Perché Scegliere Impresa Michielan</h2>
-            <p className="text-xl text-text/70 max-w-3xl mx-auto">
-              La nostra esperienza e dedizione al servizio dei nostri clienti
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {whyChooseUs.map((item, index) => (
-              <div key={index} className="bg-gradient-to-br from-background to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="w-16 h-16 bg-gradient-to-br from-cta/10 to-primary/10 rounded-2xl flex items-center justify-center mb-6">
-                  <item.icon className="w-8 h-8 text-cta" />
-                </div>
-                <h3 className="text-2xl font-bold text-primary mb-3">{item.title}</h3>
-                <p className="text-text/70 leading-relaxed">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
+      {/* ─── Testimonials (moved immediately after Services) ──────────────────── */}
       <section className="py-24 bg-gradient-to-br from-primary via-primary to-primary/90 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
@@ -320,7 +300,9 @@ export default function HomePage() {
                   <Star key={i} className="w-6 h-6 text-yellow-400 fill-yellow-400" />
                 ))}
               </div>
-              <p className="text-2xl text-white mb-8 italic leading-relaxed">&ldquo;{testimonials[currentTestimonial].text}&rdquo;</p>
+              <p className="text-2xl text-white mb-8 italic leading-relaxed">
+                &ldquo;{testimonials[currentTestimonial].text}&rdquo;
+              </p>
               <div className="flex items-center justify-between">
                 <div>
                   <p className="font-bold text-white text-xl">{testimonials[currentTestimonial].name}</p>
@@ -331,7 +313,9 @@ export default function HomePage() {
                     <button
                       key={index}
                       onClick={() => setCurrentTestimonial(index)}
-                      className={`w-3 h-3 rounded-full transition-all ${index === currentTestimonial ? 'bg-white w-8' : 'bg-white/30'}`}
+                      className={`h-3 rounded-full transition-all duration-300 ${
+                        index === currentTestimonial ? 'bg-white w-8' : 'bg-white/30 w-3'
+                      }`}
                     />
                   ))}
                 </div>
@@ -341,7 +325,206 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Final CTA - Conversion Focused */}
+      {/* ─── Prima e Dopo ─────────────────────────────────────────────────────── */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-in-up">
+            <span className="text-cta font-semibold text-lg uppercase tracking-widest mb-3 block">Risultati Reali</span>
+            <h2 className="text-5xl md:text-6xl font-bold text-primary mb-6">Prima e Dopo</h2>
+            <p className="text-xl text-text/70 max-w-3xl mx-auto">
+              Ogni progetto è una storia di trasformazione. Scopri come rinnoviamo facciate, tetti e strutture con risultati visibili e duraturi.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {beforeAfterProjects.map((item, index) => (
+              <div
+                key={index}
+                className="group rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 bg-background hover:-translate-y-2 animate-fade-in-up"
+                style={{ animationDelay: `${index * 0.15}s` }}
+              >
+                {/* Split before/after image */}
+                <div className="relative h-80 overflow-hidden">
+                  {/* PRIMA layer — full image, desaturated + darkened */}
+                  <div className="absolute inset-0">
+                    <Image
+                      src={item.image}
+                      alt={`Prima — ${item.title}`}
+                      fill
+                      className="object-cover grayscale brightness-50"
+                    />
+                  </div>
+
+                  {/* DOPO layer — full image, color, clipped to right half via clipPath */}
+                  <div className="absolute inset-0" style={{ clipPath: 'inset(0 0 0 50%)' }}>
+                    <div className="absolute inset-0">
+                      <Image
+                        src={item.image}
+                        alt={`Dopo — ${item.title}`}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Center divider */}
+                  <div className="absolute top-0 left-1/2 w-[2px] h-full bg-white z-20 -translate-x-px shadow-[0_0_8px_rgba(255,255,255,0.6)]"></div>
+
+                  {/* Labels */}
+                  <div className="absolute bottom-4 left-4 z-30 bg-black/80 text-white text-xs px-3 py-1.5 rounded-full font-bold tracking-wider">PRIMA</div>
+                  <div className="absolute bottom-4 right-4 z-30 bg-cta text-white text-xs px-3 py-1.5 rounded-full font-bold tracking-wider">DOPO</div>
+
+                  {/* Category tag */}
+                  <div className="absolute top-4 left-1/2 -translate-x-1/2 z-30 bg-white/90 backdrop-blur-sm text-primary text-xs px-4 py-1.5 rounded-full font-bold shadow-md">
+                    {item.tag}
+                  </div>
+                </div>
+
+                <div className="p-8">
+                  <h3 className="text-xl font-bold text-primary mb-3">{item.title}</h3>
+                  <p className="text-text/70 text-sm leading-relaxed">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-14">
+            <Link
+              href="/opere"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-primary to-primary/90 text-white px-10 py-5 rounded-xl text-lg font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300"
+            >
+              Vedi tutte le opere
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Why Choose Us ────────────────────────────────────────────────────── */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-in-up">
+            <h2 className="text-5xl md:text-6xl font-bold text-primary mb-6">Perché Scegliere Impresa Michielan</h2>
+            <p className="text-xl text-text/70 max-w-3xl mx-auto">
+              La nostra esperienza e dedizione al servizio dei nostri clienti
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {whyChooseUs.map((item, index) => (
+              <div
+                key={index}
+                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-cta/10 to-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                  <item.icon className="w-8 h-8 text-cta" />
+                </div>
+                <h3 className="text-2xl font-bold text-primary mb-3">{item.title}</h3>
+                <p className="text-text/70 leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Stats (moved after Why Choose Us) ───────────────────────────────── */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-in-up">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">I Numeri Parlano Chiaro</h2>
+            <p className="text-xl text-text/70">La fiducia dei nostri clienti è il nostro successo</p>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center group animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className={`w-24 h-24 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                  <stat.icon className="w-12 h-12 text-white" />
+                </div>
+                <div className="text-5xl md:text-6xl font-bold text-primary mb-3">{stat.value}</div>
+                <div className="text-text/70 font-medium text-lg">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── BASALTEK Section ─────────────────────────────────────────────────── */}
+      <section className="py-24 relative overflow-hidden">
+        {/* Background image with heavy dark overlay */}
+        <div className="absolute inset-0">
+          <Image
+            src="https://www.impresamichielan.com/wp-content/uploads/2025/11/SFONDO-HOME-IMPRESA-MICHIELAN.jpg"
+            alt="BASALTEK background"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-950/97 via-gray-900/95 to-primary/90"></div>
+        </div>
+
+        {/* Decorative blobs */}
+        <div className="absolute inset-0 opacity-15 pointer-events-none">
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-cta rounded-full blur-[120px]"></div>
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary rounded-full blur-[100px]"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+              {/* Left — headline + description + CTAs */}
+              <div className="text-white">
+                <span className="inline-block text-cta font-semibold text-sm uppercase tracking-[0.2em] mb-5 border border-cta/40 px-4 py-1.5 rounded-full">
+                  Materiale Esclusivo
+                </span>
+                <h2 className="text-7xl md:text-8xl font-black mb-4 leading-none tracking-tight">
+                  BASALTEK
+                </h2>
+                <p className="text-2xl text-white/70 mb-6 font-light">
+                  La fibra di basalto per l&apos;edilizia del futuro
+                </p>
+                <p className="text-lg text-white/60 mb-10 leading-relaxed">
+                  BASALTEK è un sistema costruttivo rivoluzionario in fibra di basalto vulcanico. Superiore all&apos;acciaio in resistenza, quattro volte più leggero, incombustibile e completamente eco-sostenibile. Impresa Michielan è uno dei pochi applicatori certificati nella provincia di Venezia.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link
+                    href="/servizi/materiali"
+                    className="bg-cta text-white px-8 py-4 rounded-xl font-semibold hover:bg-cta/90 hover:scale-105 transition-all duration-300 inline-flex items-center justify-center gap-3 shadow-lg shadow-cta/30"
+                  >
+                    Scopri BASALTEK
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+                  <button
+                    onClick={() => setContactModalOpen(true)}
+                    className="border-2 border-white/25 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 hover:border-white/50 hover:scale-105 transition-all duration-300"
+                  >
+                    Richiedi Informazioni
+                  </button>
+                </div>
+              </div>
+
+              {/* Right — feature grid */}
+              <div className="grid grid-cols-2 gap-4">
+                {basaltekFeatures.map((feature, index) => (
+                  <div
+                    key={index}
+                    className="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
+                  >
+                    <div className="w-12 h-12 bg-cta/15 rounded-xl flex items-center justify-center mb-4 group-hover:bg-cta/25 transition-colors duration-300">
+                      <feature.icon className="w-6 h-6 text-cta" />
+                    </div>
+                    <h3 className="text-white font-bold mb-2 text-sm">{feature.title}</h3>
+                    <p className="text-white/50 text-xs leading-relaxed">{feature.description}</p>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Final CTA ────────────────────────────────────────────────────────── */}
       <section className="py-24 bg-gradient-to-r from-cta to-cta/90 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
