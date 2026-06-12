@@ -164,24 +164,24 @@ export default function HomePage() {
 
   const AUTHENTIC_PROJECTS = [
     {
-      title: 'Restauro Facciate',
-      description: 'Risanamento completo delle pareti esterne e nuova tinteggiatura protettiva.',
-      imageBefore: '/images/WhatsApp Image 2026-06-11 at 10.50.14 PM (2).jpeg',
-      imageAfter: '/images/WhatsApp Image 2026-06-11 at 10.50.14 PM.jpeg',
-      tag: 'Restauro'
-    },
-    {
       title: 'Rifacimento Tetto',
-      description: 'Sostituzione integrale della copertura con isolamento e nuove tegole.',
-      imageBefore: '/images/WhatsApp Image 2026-06-11 at 10.50.18 PM (2).jpeg',
-      imageAfter: '/images/WhatsApp Image 2026-06-11 at 10.50.16 PM (2).jpeg',
+      description: 'Sostituzione integrale della copertura con nuove tegole e isolamento ventilato.',
+      imageBefore: '/beforeafter/WhatsApp Image 2026-06-11 at 10.50.11 PM (2).jpeg',
+      imageAfter: '/beforeafter/WhatsApp Image 2026-06-11 at 10.50.12 PM.jpeg',
       tag: 'Tetto'
     },
     {
+      title: 'Restauro Facciate',
+      description: 'Risanamento pareti esterne con finiture traspiranti ad alta protezione.',
+      imageBefore: '/beforeafter/WhatsApp Image 2026-06-11 at 10.50.13 PM (1).jpeg',
+      imageAfter: '/beforeafter/WhatsApp Image 2026-06-11 at 10.50.13 PM.jpeg',
+      tag: 'Restauro'
+    },
+    {
       title: 'Impermeabilizzazione',
-      description: 'Rifacimento superfici esterne con sistemi impermeabili e nuova pavimentazione.',
-      imageBefore: '/images/WhatsApp Image 2026-06-11 at 10.50.20 PM (2).jpeg',
-      imageAfter: '/images/WhatsApp Image 2026-06-11 at 10.50.20 PM.jpeg',
+      description: 'Protezione definitiva delle superfici esterne e nuova pavimentazione.',
+      imageBefore: '/beforeafter/WhatsApp Image 2026-06-11 at 10.50.18 PM (3).jpeg',
+      imageAfter: '/beforeafter/WhatsApp Image 2026-06-11 at 10.50.19 PM.jpeg',
       tag: 'Terrazza'
     },
   ]
