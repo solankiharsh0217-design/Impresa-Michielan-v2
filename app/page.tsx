@@ -165,24 +165,24 @@ export default function HomePage() {
   const AUTHENTIC_PROJECTS = [
     {
       title: 'Restauro Facciate',
-      description: 'Rimozione del vecchio intonaco e rifacimento completo con finiture traspiranti.',
+      description: 'Risanamento completo delle pareti esterne e nuova tinteggiatura protettiva.',
       imageBefore: '/images/WhatsApp Image 2026-06-11 at 10.50.14 PM (2).jpeg',
-      imageAfter: '/images/WhatsApp Image 2026-06-11 at 10.50.10 PM (1).jpeg',
+      imageAfter: '/images/WhatsApp Image 2026-06-11 at 10.50.14 PM.jpeg',
       tag: 'Restauro'
     },
     {
       title: 'Rifacimento Tetto',
-      description: 'Sostituzione vecchie tegole ammalorate con nuova copertura ventilata.',
-      imageBefore: '/images/WhatsApp Image 2026-06-11 at 10.50.28 PM.jpeg',
-      imageAfter: '/images/WhatsApp Image 2026-06-11 at 10.50.29 PM (1).jpeg',
+      description: 'Sostituzione integrale della copertura con isolamento e nuove tegole.',
+      imageBefore: '/images/WhatsApp Image 2026-06-11 at 10.50.18 PM (2).jpeg',
+      imageAfter: '/images/WhatsApp Image 2026-06-11 at 10.50.16 PM (2).jpeg',
       tag: 'Tetto'
     },
     {
-      title: 'Isolamento Termico',
-      description: 'Efficientamento energetico del sottotetto con pannelli isolanti ad alta densità.',
-      imageBefore: '/images/WhatsApp Image 2026-06-11 at 10.50.25 PM (1).jpeg',
-      imageAfter: '/images/WhatsApp Image 2026-06-11 at 10.50.25 PM.jpeg',
-      tag: 'Isolamento'
+      title: 'Impermeabilizzazione',
+      description: 'Rifacimento superfici esterne con sistemi impermeabili e nuova pavimentazione.',
+      imageBefore: '/images/WhatsApp Image 2026-06-11 at 10.50.20 PM (2).jpeg',
+      imageAfter: '/images/WhatsApp Image 2026-06-11 at 10.50.20 PM.jpeg',
+      tag: 'Terrazza'
     },
   ]
 
