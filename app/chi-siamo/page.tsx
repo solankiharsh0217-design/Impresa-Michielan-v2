@@ -16,13 +16,6 @@ export default function ChiSiamoPage() {
     { icon: Heart, title: 'Passione', description: 'Dedizione e cura in ogni progetto, grande o piccolo che sia' }
   ]
 
-  const timeline = [
-    { year: '1990', title: 'Fondazione', description: 'Donato Michielan fonda l\'impresa edile' },
-    { year: '2000', title: 'Espansione', description: 'Ampliamento servizi e territorio' },
-    { year: '2010', title: 'Innovazione', description: 'Introduzione materiali innovativi' },
-    { year: '2023', title: 'Certificazione', description: 'Ottenimento certificazione SOA23' }
-  ]
-
   return (
     <>
       {/* Hero */}
@@ -35,7 +28,7 @@ export default function ChiSiamoPage() {
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-br from-primary/90 to-black/70" />
-        <div className="relative z-10 container mx-auto px-4 text-center mt-36">
+        <div className="relative z-10 container mx-auto px-4 text-center mt-48 lg:mt-56">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">Chi Siamo</h1>
           <p className="text-2xl text-white/90 max-w-3xl mx-auto">Una storia di famiglia, passione e dedizione al lavoro ben fatto</p>
         </div>
@@ -66,29 +59,6 @@ export default function ChiSiamoPage() {
                   />
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary text-center mb-16">La Nostra Storia</h2>
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-8">
-              {timeline.map((item, index) => (
-                <div key={index} className="flex gap-8 items-start">
-                  <div className="flex-shrink-0 w-24 text-right">
-                    <div className="text-3xl font-bold text-cta">{item.year}</div>
-                  </div>
-                  <div className="flex-shrink-0 w-4 h-4 bg-cta rounded-full mt-2"></div>
-                  <div className="flex-1 bg-white p-6 rounded-2xl shadow-lg">
-                    <h3 className="text-2xl font-bold text-primary mb-2">{item.title}</h3>
-                    <p className="text-text/70">{item.description}</p>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </div>

@@ -5,9 +5,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle, Users, Building2, Award, TrendingUp, Phone, Star, Shield, Clock, ThumbsUp, Zap, Home as HomeIcon, Flame, Leaf, Droplets, Layers } from 'lucide-react'
 import ContactModal from '@/components/ContactModal'
+import BeforeAfterSlider from '@/components/BeforeAfterSlider'
+import ServiceModal from '@/components/ServiceModal'
 
 export default function HomePage() {
   const [contactModalOpen, setContactModalOpen] = useState(false)
+  const [selectedService, setSelectedService] = useState<any>(null)
+  const [serviceModalOpen, setServiceModalOpen] = useState(false)
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
 
   useEffect(() => {
@@ -21,58 +25,94 @@ export default function HomePage() {
 
   const stats = [
     { icon: Building2, value: '30+', label: 'Anni di Esperienza', color: 'from-blue-500 to-blue-600' },
-    { icon: Users, value: '500+', label: 'Clienti Soddisfatti', color: 'from-green-500 to-green-600' },
+    { icon: Users, value: 'Numerose', label: 'Recensioni a 5 stelle', color: 'from-green-500 to-green-600' },
     { icon: Award, value: '1000+', label: 'Progetti Completati', color: 'from-purple-500 to-purple-600' },
     { icon: TrendingUp, value: '100%', label: 'Qualità Garantita', color: 'from-orange-500 to-orange-600' },
   ]
 
   const services = [
     {
+      id: 'restauri',
       title: 'Restauri e Pitture Edili',
-      description: 'Rinnovamento facciate con materiali innovativi per estetica, isolamento ed efficienza energetica',
-      image: 'https://images.unsplash.com/photo-1534161919789-69eb71e62291?auto=format&fit=crop&w=1200&q=80',
-      link: '/servizi/restauri',
+      description: 'Offriamo soluzioni complete per il restauro e la pittura di edifici storici e moderni. Utilizziamo tecniche all\'avanguardia e materiali di altissima qualità per garantire risultati duraturi ed esteticamente impeccabili.',
+      image: '/images/WhatsApp Image 2026-06-11 at 10.50.10 PM (1).jpeg',
       features: ['Facciate esterne', 'Pitture interne', 'Materiali certificati'],
+      details: [
+        'Ripristino intonaci degradati',
+        'Trattamenti anti-muffa e anti-umidità',
+        'Pitture decorative e protettive',
+        'Consulenza cromatica personalizzata'
+      ],
       icon: HomeIcon
     },
     {
+      id: 'isolamenti',
       title: 'Isolamenti e Cappotti',
-      description: 'Soluzioni a basso spessore per isolamento termico, risparmio energetico e comfort abitativo',
-      image: 'https://images.unsplash.com/photo-1779031149884-bd80eed1e275?auto=format&fit=crop&w=1200&q=80',
-      link: '/servizi/isolamenti',
+      description: 'L\'isolamento termico è fondamentale per il comfort abitativo e il risparmio energetico. Realizziamo sistemi a cappotto e isolamenti a basso spessore utilizzando materiali innovativi.',
+      image: '/images/WhatsApp Image 2026-06-11 at 10.50.24 PM (1).jpeg',
       features: ['Cappotti termici', 'Anti-umidità', 'Risparmio energetico'],
+      details: [
+        'Isolamento pareti esterne ed interne',
+        'Sistemi a basso spessore per interni',
+        'Certificazione energetica post-intervento',
+        'Utilizzo di pannelli in fibra di basalto'
+      ],
       icon: Shield
     },
     {
+      id: 'tetti',
       title: 'Rifacimento Tetti',
-      description: 'Ristrutturazione completa con tegole, coppi o lamiera coibentata e impermeabilizzazioni',
-      image: 'https://images.unsplash.com/photo-1605450099279-533bd3ce379a?auto=format&fit=crop&w=1200&q=80',
-      link: '/servizi/tetti',
+      description: 'Proteggiamo la tua casa dalle intemperie con interventi specializzati su tetti e terrazzi. Dalla riparazione localizzata al rifacimento completo, garantiamo impermeabilizzazione totale.',
+      image: '/images/WhatsApp Image 2026-06-11 at 10.50.16 PM (2).jpeg',
       features: ['Tetti tradizionali', 'Impermeabilizzazioni', 'Lattoneria'],
+      details: [
+        'Posa tegole e coppi',
+        'Impermeabilizzazione terrazzi con resine',
+        'Sostituzione grondaie e pluviali',
+        'Isolamento ventilato per sottotetti'
+      ],
       icon: HomeIcon
     },
     {
+      id: 'cartongessi',
       title: 'Cartongessi',
-      description: 'Pareti divisorie, controsoffitti e soluzioni acustiche per spazi moderni e funzionali',
-      image: 'https://images.unsplash.com/photo-1768321917661-d4f1a89d2185?auto=format&fit=crop&w=1200&q=80',
-      link: '/servizi/cartongessi',
+      description: 'Il cartongesso permette di ridisegnare gli spazi in modo rapido e pulito. Realizziamo contropareti isolanti, controsoffitti moderni e soluzioni acustiche per ogni ambiente.',
+      image: '/images/WhatsApp Image 2026-06-11 at 10.50.26 PM (2).jpeg',
       features: ['Pareti divisorie', 'Controsoffitti', 'Isolamento acustico'],
+      details: [
+        'Pareti curve e design personalizzato',
+        'Integrazione illuminazione LED',
+        'Controsoffitti radianti e acustici',
+        'Lavorazioni ignifughe e idrorepellenti'
+      ],
       icon: HomeIcon
     },
     {
+      id: 'materiali',
       title: 'Materiali Innovativi',
-      description: 'IZONIL e pannelli in fibra di basalto per un ambiente salubre e sostenibile',
-      image: 'https://www.impresamichielan.com/wp-content/uploads/2025/11/izonilogo.avif',
-      link: '/servizi/materiali',
-      features: ['IZONIL impermeabile', 'Fibra di basalto', 'Certificati'],
+      description: 'Pannelli in fibra di basalto BASALTEK e intonaci IZONIL per un ambiente salubre e sostenibile.',
+      image: '/images/WhatsApp Image 2026-06-11 at 10.50.25 PM.jpeg',
+      features: ['Fibra di basalto', 'IZONIL impermeabile', 'Certificati'],
+      details: [
+        'Sistemi in fibra di basalto BASALTEK',
+        'Applicazione intonaci deumidificanti IZONIL',
+        'Pannelli isolanti incombustibili',
+        'Materiali a km zero ed eco-compatibili'
+      ],
       icon: Award
     },
     {
+      id: 'ristrutturazioni',
       title: 'Ristrutturazioni Complete',
-      description: 'Progetti chiavi in mano con supervisione totale dalla progettazione alla consegna',
-      image: 'https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?auto=format&fit=crop&w=1200&q=80',
-      link: '/servizi/ristrutturazioni',
+      description: 'Ci occupiamo di tutto noi. Dalla progettazione alla scelta dei materiali, fino alla consegna chiavi in mano. Un unico referente per una ristrutturazione senza stress.',
+      image: '/images/WhatsApp Image 2026-06-11 at 10.50.10 PM.jpeg',
       features: ['Chiavi in mano', 'Supervisione totale', 'Materiali certificati'],
+      details: [
+        'Coordinamento maestranze',
+        'Gestione pratiche edilizie e bonus',
+        'Rifacimento impianti e finiture',
+        'Rispetto rigoroso dei tempi e budget'
+      ],
       icon: Award
     },
   ]
@@ -122,32 +162,34 @@ export default function HomePage() {
     { icon: Layers, title: 'Ultra Leggero', description: 'Quattro volte più leggero dell\'acciaio, ideale per qualsiasi struttura' },
   ]
 
-  const beforeAfterProjects = [
+  const AUTHENTIC_PROJECTS = [
     {
-      title: 'Restauro Facciata Esterna',
-      description: 'Pulizia con idropulitrice ad alta pressione, trattamento anti-umidità e tinteggiatura con materiali innovativi per un risultato duraturo.',
-      // Weathered degraded building → restored Venetian facade (Venice, Italy)
-      imageBefore: 'https://images.unsplash.com/photo-1771337744364-e7dd00c2921c?auto=format&fit=crop&w=800&q=80',
-      imageAfter: 'https://images.unsplash.com/photo-1534161919789-69eb71e62291?auto=format&fit=crop&w=800&q=80',
+      title: 'Restauro Facciate',
+      description: 'Rimozione del vecchio intonaco e rifacimento completo con finiture traspiranti.',
+      imageBefore: '/images/WhatsApp Image 2026-06-11 at 10.50.14 PM (2).jpeg',
+      imageAfter: '/images/WhatsApp Image 2026-06-11 at 10.50.10 PM (1).jpeg',
       tag: 'Restauro'
     },
     {
-      title: 'Rifacimento Copertura',
-      description: 'Sostituzione completa del manto di copertura con nuove tegole, isolamento termico e impermeabilizzazione professionale.',
-      // Old grey deteriorated roof → new brown Italian terracotta tiles (Jesi, Italy)
-      imageBefore: 'https://images.unsplash.com/photo-1673645652590-9d21295bf4ac?auto=format&fit=crop&w=800&q=80',
-      imageAfter: 'https://images.unsplash.com/photo-1605450099279-533bd3ce379a?auto=format&fit=crop&w=800&q=80',
+      title: 'Rifacimento Tetto',
+      description: 'Sostituzione vecchie tegole ammalorate con nuova copertura ventilata.',
+      imageBefore: '/images/WhatsApp Image 2026-06-11 at 10.50.28 PM.jpeg',
+      imageAfter: '/images/WhatsApp Image 2026-06-11 at 10.50.29 PM (1).jpeg',
       tag: 'Tetto'
     },
     {
-      title: 'Ristrutturazione Interna',
-      description: 'Demolizione e bonifica degli spazi, rifacimento completo con nuovi impianti, isolamento e finiture di qualità.',
-      // Before: empty shell under demolition → After: structural renovation in progress
-      imageBefore: 'https://images.unsplash.com/photo-1634586648651-f1fb9ec10d90?auto=format&fit=crop&w=800&q=80',
-      imageAfter: 'https://images.unsplash.com/photo-1768321917661-d4f1a89d2185?auto=format&fit=crop&w=800&q=80',
-      tag: 'Ristrutturazione'
+      title: 'Isolamento Termico',
+      description: 'Efficientamento energetico del sottotetto con pannelli isolanti ad alta densità.',
+      imageBefore: '/images/WhatsApp Image 2026-06-11 at 10.50.25 PM (1).jpeg',
+      imageAfter: '/images/WhatsApp Image 2026-06-11 at 10.50.25 PM.jpeg',
+      tag: 'Isolamento'
     },
   ]
+
+  const openServiceModal = (service: any) => {
+    setSelectedService(service)
+    setServiceModalOpen(true)
+  }
 
   return (
     <>
@@ -164,7 +206,7 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/85 to-black/70" />
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 py-8 mt-36 max-h-screen overflow-y-auto">
+        <div className="relative z-10 container mx-auto px-4 py-8 mt-48 lg:mt-56 max-h-screen overflow-y-auto">
           <div className="max-w-4xl animate-fade-in-up">
             {/* Headline — made larger per client request */}
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-4 leading-tight">
@@ -222,7 +264,7 @@ export default function HomePage() {
             </div>
             <div className="flex items-center gap-2">
               <Star className="w-6 h-6 text-yellow-400 fill-yellow-400" />
-              <span className="font-semibold">500+ Recensioni 5 Stelle</span>
+              <span className="font-semibold">Numerose Recensioni 5 Stelle</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="w-6 h-6 text-cta" />
@@ -244,10 +286,10 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Link
+              <div
                 key={index}
-                href={service.link}
-                className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-cta/30 hover:-translate-y-2 animate-fade-in-up"
+                onClick={() => openServiceModal(service)}
+                className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-cta/30 hover:-translate-y-2 animate-fade-in-up cursor-pointer"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative h-64 overflow-hidden">
@@ -262,11 +304,11 @@ export default function HomePage() {
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
                   <div className="absolute bottom-6 left-6 right-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
+                    <h3 className="text-3xl font-bold text-white mb-2">{service.title}</h3>
                   </div>
                 </div>
                 <div className="p-8">
-                  <p className="text-text/70 mb-6 leading-relaxed">{service.description}</p>
+                  <p className="text-text/70 mb-6 leading-relaxed text-lg">{service.description.substring(0, 100)}...</p>
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-sm text-text/60">
@@ -280,7 +322,7 @@ export default function HomePage() {
                     <ArrowRight className="w-5 h-5" />
                   </div>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
@@ -294,39 +336,31 @@ export default function HomePage() {
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6">Cosa Dicono i Nostri Clienti</h2>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+            <h2 className="text-6xl md:text-8xl font-bold mb-6">Cosa Dicono i Nostri Clienti</h2>
+            <p className="text-2xl text-white/80 max-w-3xl mx-auto">
               La soddisfazione dei nostri clienti è la nostra migliore referenza
             </p>
           </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-md p-12 rounded-3xl border border-white/20">
-              <div className="flex gap-2 mb-6">
-                {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 text-yellow-400 fill-yellow-400" />
-                ))}
-              </div>
-              <p className="text-2xl text-white mb-8 italic leading-relaxed">
-                &ldquo;{testimonials[currentTestimonial].text}&rdquo;
-              </p>
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="font-bold text-white text-xl">{testimonials[currentTestimonial].name}</p>
-                  <p className="text-white/70">{testimonials[currentTestimonial].location}</p>
-                </div>
-                <div className="flex gap-2">
-                  {testimonials.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentTestimonial(index)}
-                      className={`h-3 rounded-full transition-all duration-300 ${
-                        index === currentTestimonial ? 'bg-white w-8' : 'bg-white/30 w-3'
-                      }`}
-                    />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {testimonials.slice(0, 3).map((testimonial, index) => (
+              <div 
+                key={index}
+                className="bg-white/10 backdrop-blur-md p-10 rounded-3xl border border-white/20 flex flex-col h-full hover:bg-white/15 transition-all duration-300"
+              >
+                <div className="flex gap-1 mb-6">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
                   ))}
                 </div>
+                <p className="text-xl text-white mb-8 italic leading-relaxed flex-grow">
+                  &ldquo;{testimonial.text}&rdquo;
+                </p>
+                <div className="mt-auto pt-6 border-t border-white/10">
+                  <p className="font-bold text-white text-xl">{testimonial.name}</p>
+                  <p className="text-white/70 text-sm">{testimonial.location}</p>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -342,50 +376,23 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {beforeAfterProjects.map((item, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-7xl mx-auto">
+            {AUTHENTIC_PROJECTS.map((item, index) => (
               <div
                 key={index}
-                className="group rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 bg-background hover:-translate-y-2 animate-fade-in-up"
+                className="animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
-                {/* Split before/after — two genuinely different photos */}
-                <div className="relative h-80 overflow-hidden flex">
-                  {/* Left half: PRIMA */}
-                  <div className="relative w-1/2 overflow-hidden flex-shrink-0">
-                    <Image
-                      src={item.imageBefore}
-                      alt={`Prima — ${item.title}`}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/20" />
-                    <div className="absolute bottom-4 left-4 z-10 bg-black/80 text-white text-xs px-3 py-1.5 rounded-full font-bold tracking-wider">PRIMA</div>
-                  </div>
-
-                  {/* Right half: DOPO */}
-                  <div className="relative w-1/2 overflow-hidden flex-shrink-0">
-                    <Image
-                      src={item.imageAfter}
-                      alt={`Dopo — ${item.title}`}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute bottom-4 right-4 z-10 bg-cta text-white text-xs px-3 py-1.5 rounded-full font-bold tracking-wider">DOPO</div>
-                  </div>
-
-                  {/* Center divider */}
-                  <div className="absolute top-0 left-1/2 w-[3px] h-full bg-white z-20 -translate-x-px shadow-[0_0_10px_rgba(255,255,255,0.8)]" />
-
-                  {/* Category tag centered on divider */}
-                  <div className="absolute top-4 left-1/2 -translate-x-1/2 z-30 bg-white/90 backdrop-blur-sm text-primary text-xs px-4 py-1.5 rounded-full font-bold shadow-md whitespace-nowrap">
+                <BeforeAfterSlider
+                  beforeImage={item.imageBefore}
+                  afterImage={item.imageAfter}
+                  title={item.title}
+                />
+                <div className="mt-4 text-center">
+                  <p className="text-text/70 text-sm leading-relaxed max-w-xs mx-auto">{item.description}</p>
+                  <div className="mt-3 inline-block bg-cta/10 text-cta text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider">
                     {item.tag}
                   </div>
-                </div>
-
-                <div className="p-8">
-                  <h3 className="text-xl font-bold text-primary mb-3">{item.title}</h3>
-                  <p className="text-text/70 text-sm leading-relaxed">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -453,13 +460,12 @@ export default function HomePage() {
       </section>
 
       {/* ─── BASALTEK Section ─────────────────────────────────────────────────── */}
-      {/* Solid dark background — no image bleed-through, guaranteed readability */}
-      <section className="py-24 bg-gray-950 relative overflow-hidden">
+      <section className="py-24 bg-black relative overflow-hidden">
 
-        {/* Subtle decorative colour blobs */}
+        {/* Subtle decorative emerald/blue blobs */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-cta/20 rounded-full blur-[140px]"></div>
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/40 rounded-full blur-[120px]"></div>
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-600/20 rounded-full blur-[140px]"></div>
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-sky-600/40 rounded-full blur-[120px]"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -468,7 +474,7 @@ export default function HomePage() {
 
               {/* Left — headline + description + CTAs */}
               <div className="text-white">
-                <span className="inline-block text-cta font-semibold text-sm uppercase tracking-[0.2em] mb-5 border border-cta/50 px-4 py-1.5 rounded-full">
+                <span className="inline-block text-emerald-500 font-semibold text-sm uppercase tracking-[0.2em] mb-5 border border-emerald-500/50 px-4 py-1.5 rounded-full">
                   Materiale Esclusivo
                 </span>
                 <h2 className="text-7xl md:text-8xl font-black mb-4 leading-none tracking-tight text-white">
@@ -482,8 +488,8 @@ export default function HomePage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
-                    href="/servizi/materiali"
-                    className="bg-cta text-white px-8 py-4 rounded-xl font-semibold hover:bg-cta/90 hover:scale-105 transition-all duration-300 inline-flex items-center justify-center gap-3 shadow-lg shadow-cta/40"
+                    href="/basaltek"
+                    className="bg-emerald-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-emerald-500 hover:scale-105 transition-all duration-300 inline-flex items-center justify-center gap-3 shadow-lg shadow-emerald-500/40"
                   >
                     Scopri BASALTEK
                     <ArrowRight className="w-5 h-5" />
@@ -504,8 +510,8 @@ export default function HomePage() {
                     key={index}
                     className="bg-white/8 p-6 rounded-2xl border border-white/15 hover:bg-white/12 hover:border-white/30 transition-all duration-300 group"
                   >
-                    <div className="w-12 h-12 bg-cta/25 rounded-xl flex items-center justify-center mb-4 group-hover:bg-cta/40 transition-colors duration-300">
-                      <feature.icon className="w-6 h-6 text-cta" />
+                    <div className="w-12 h-12 bg-emerald-500/25 rounded-xl flex items-center justify-center mb-4 group-hover:bg-emerald-500/40 transition-colors duration-300">
+                      <feature.icon className="w-6 h-6 text-emerald-400" />
                     </div>
                     <h3 className="text-white font-bold mb-2 text-sm">{feature.title}</h3>
                     <p className="text-white/70 text-xs leading-relaxed">{feature.description}</p>
@@ -565,6 +571,11 @@ export default function HomePage() {
       </section>
 
       <ContactModal isOpen={contactModalOpen} onClose={() => setContactModalOpen(false)} />
+      <ServiceModal 
+        isOpen={serviceModalOpen} 
+        onClose={() => setServiceModalOpen(false)} 
+        service={selectedService} 
+      />
     </>
   )
 }
