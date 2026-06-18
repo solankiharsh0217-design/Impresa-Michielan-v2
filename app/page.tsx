@@ -29,13 +29,12 @@ export default function HomePage() {
     { icon: Award, value: '1000+', label: 'Progetti Completati', color: 'from-purple-500 to-purple-600' },
     { icon: TrendingUp, value: '100%', label: 'Qualità Garantita', color: 'from-orange-500 to-orange-600' },
   ]
-
-  const services = [
+  const services = [
     {
       id: 'restauri',
       title: 'Restauri e Pitture Edili',
       description: 'Offriamo soluzioni complete per il restauro e la pittura di edifici storici e moderni. Utilizziamo tecniche all\'avanguardia e materiali di altissima qualità per garantire risultati duraturi ed esteticamente impeccabili.',
-      image: '/images/gallery/restauri/restauri-01.jpg',
+      image: '/images/before-after/idropulizia-facciate-after.jpg',
       features: ['Facciate esterne', 'Pitture interne', 'Materiali certificati'],
       details: [
         'Ripristino intonaci degradati',
@@ -77,7 +76,7 @@ export default function HomePage() {
       id: 'cartongessi',
       title: 'Cartongessi e Contropareti',
       description: 'Il cartongesso permette di ridisegnare gli spazi in modo rapido e pulito. Realizziamo contropareti isolanti, controsoffitti moderni e soluzioni strutturali per ogni ambiente.',
-      image: '/images/gallery/interni/interni-01.jpg',
+      image: '/images/gallery/interni/interni-04.jpg',
       features: ['Controsoffitti', 'Design personalizzato', 'Illuminazione LED'],
       details: [
         'Controsoffitti moderni con LED integrati',
@@ -171,8 +170,8 @@ export default function HomePage() {
       tag: 'Facciate'
     },
     {
-      title: 'Idrolavaggio Tetti',
-      description: 'Rimozione muschi e sedimenti per riportare le tegole al colore originale.',
+      title: 'Rifacimento Tetto in Tegole',
+      description: 'Sostituzione e rifacimento del manto di copertura con nuove tegole e colmi.',
       imageBefore: '/images/before-after/idrolavaggio-before.jpg',
       imageAfter: '/images/before-after/idrolavaggio-after.jpg',
       tag: 'Tetti'

@@ -38,7 +38,7 @@ export default function OperePage() {
     {
       id: 'ms1',
       title: 'Ristrutturazione Bagno Integrale',
-      category: 'Trasformazioni',
+      category: 'Interni',
       location: 'Ponzano (TV)',
       description: 'Evoluzione completa di un bagno: dalla demolizione iniziale, alla posa dell\'impermeabilizzazione verde, alla piastrellatura di precisione, fino al risultato finale moderno.',
       stages: [
@@ -52,7 +52,7 @@ export default function OperePage() {
     {
       id: 'ms2',
       title: 'Isolamento e Finiture Interne',
-      category: 'Trasformazioni',
+      category: 'Interni',
       location: 'Martellago (VE)',
       description: 'Processo di riqualificazione interna: installazione pannelli Basaltek, preparazione superfici e tinteggiatura finale di pregio.',
       stages: [
@@ -68,7 +68,7 @@ export default function OperePage() {
     {
       id: 'ba1',
       title: 'Idropulizia Facciate',
-      category: 'Prima e Dopo',
+      category: 'Restauri',
       location: 'Spinea (VE)',
       description: 'Risanamento estetico profondo tramite idropulizia professionale.',
       before: '/images/before-after/idropulizia-before.jpg',
@@ -76,17 +76,17 @@ export default function OperePage() {
     },
     {
       id: 'ba2',
-      title: 'Idrolavaggio Tetti',
-      category: 'Prima e Dopo',
+      title: 'Rifacimento Tetto in Tegole',
+      category: 'Tetti',
       location: 'Scorzè (VE)',
-      description: 'Rimozione muschi e sedimenti per riportare le tegole al colore originale.',
+      description: 'Sostituzione e rifacimento del manto di copertura con nuove tegole e colmi.',
       before: '/images/before-after/idrolavaggio-before.jpg',
       after: '/images/before-after/idrolavaggio-after.jpg'
     },
     {
       id: 'ba3',
       title: 'Pavimentazione Esterna',
-      category: 'Prima e Dopo',
+      category: 'Restauri',
       location: 'Treviso',
       description: 'Posa di pavimentazione in pietra su sottofondo grezzo.',
       before: '/images/before-after/pavimento-before.jpg',
@@ -95,7 +95,7 @@ export default function OperePage() {
     {
       id: 'ba4',
       title: 'Posa Pavimenti Interni',
-      category: 'Prima e Dopo',
+      category: 'Interni',
       location: 'Maerne (VE)',
       description: 'Lavorazione di precisione con livellatori e risultato lucido finale.',
       before: '/images/before-after/maerne-pav-before.jpg',
@@ -104,7 +104,7 @@ export default function OperePage() {
     {
       id: 'ba5',
       title: 'Ristrutturazione Bagno Moderno',
-      category: 'Prima e Dopo',
+      category: 'Interni',
       location: 'Maerne (VE)',
       description: 'Trasformazione radicale di un vecchio bagno in uno spazio di design con marmi scuri.',
       before: '/images/before-after/maerne-bath-before.jpg',
@@ -113,7 +113,7 @@ export default function OperePage() {
     {
       id: 'ba6',
       title: 'Isolamento Seminterrato',
-      category: 'Prima e Dopo',
+      category: 'Interni',
       location: 'Ponzano (TV)',
       description: 'Risanamento pareti umide e finitura isolante.',
       before: '/images/before-after/ponzano-iso-before.jpg',
@@ -121,10 +121,10 @@ export default function OperePage() {
     },
     {
       id: 'ba7',
-      title: 'Idropulizia Facciate',
-      category: 'Prima e Dopo',
+      title: 'Restauro Facciata e Tinteggiatura',
+      category: 'Restauri',
       location: 'Scorzè (VE)',
-      description: 'Pulizia e ripristino estetico facciate con idropulizia professionale.',
+      description: 'Ripristino intonaco e tinteggiatura finale protettiva di una facciata.',
       before: '/images/before-after/idropulizia-facciate-before.jpg',
       after: '/images/before-after/idropulizia-facciate-after.jpg'
     },
@@ -140,7 +140,7 @@ export default function OperePage() {
     {
       id: 'ba9',
       title: 'Applicazione Cappotto Esterno',
-      category: 'Prima e Dopo',
+      category: 'Restauri',
       location: 'Scorzè (VE)',
       description: 'Applicazione cappotto termico esterno con finitura a regola d\'arte.',
       before: '/images/before-after/cappotto-before.jpg',
@@ -151,6 +151,18 @@ export default function OperePage() {
   const handleStageChange = (id: string, index: number) => {
     setActiveStages(prev => ({ ...prev, [id]: index }))
   }
+
+  const displayedMultiStages = multiStages.filter(ms => 
+    filter === 'All' || 
+    filter === 'Trasformazioni' || 
+    ms.category === filter
+  )
+
+  const displayedBeforeAfters = beforeAfters.filter(ba => 
+    filter === 'All' || 
+    filter === 'Prima e Dopo' || 
+    ba.category === filter
+  )
 
   return (
     <>
@@ -178,14 +190,14 @@ export default function OperePage() {
           </div>
 
           {/* Multi-Stage Transformations */}
-          {(filter === 'All' || filter === 'Trasformazioni') && (
+          {displayedMultiStages.length > 0 && (
             <div className="mb-32">
               <h2 className="text-4xl font-black text-primary mb-12 flex items-center gap-4">
-                Trasformazioni in 4 Fasi
+                Trasformazioni in Fasi
                 <span className="h-1 flex-grow bg-primary/10 rounded-full" />
               </h2>
               <div className="grid grid-cols-1 gap-20">
-                {multiStages.map((ms) => {
+                {displayedMultiStages.map((ms) => {
                   const currentIndex = activeStages[ms.id] || 0
                   return (
                     <div key={ms.id} className="bg-white p-8 lg:p-12 rounded-[4rem] shadow-2xl border border-gray-100 grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -238,14 +250,14 @@ export default function OperePage() {
           )}
 
           {/* Before & After Pairs */}
-          {(filter === 'All' || filter === 'Prima e Dopo') && (
+          {displayedBeforeAfters.length > 0 && (
             <div>
               <h2 className="text-4xl font-black text-primary mb-12 flex items-center gap-4">
                 Prima e Dopo
                 <span className="h-1 flex-grow bg-primary/10 rounded-full" />
               </h2>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                {beforeAfters.map((ba) => (
+                {displayedBeforeAfters.map((ba) => (
                   <div key={ba.id} className="bg-white p-6 rounded-[3rem] shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300">
                     <div className="flex flex-col sm:flex-row gap-4 mb-8">
                        <div className="relative h-64 sm:w-1/2 rounded-2xl overflow-hidden shadow-inner bg-gray-50">
