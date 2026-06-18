@@ -26,8 +26,13 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-12 ml-20">
+            <div className="flex flex-col items-end mr-4 border-r pr-6 border-gray-100">
+              <span className="text-[10px] uppercase tracking-[0.2em] text-text/40 font-bold">Certificazioni</span>
+              <span className="text-sm font-black text-primary flex items-center gap-1">
+                SOA23 <span className="text-cta">•</span> OG1
+              </span>
+            </div>
             <Link href="/" className="text-text hover:text-cta transition-colors duration-300 font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cta after:transition-all after:duration-300 hover:after:w-full">Home</Link>
             <Link href="/servizi" className="text-text hover:text-cta transition-colors duration-300 font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cta after:transition-all after:duration-300 hover:after:w-full">Servizi</Link>
             

@@ -22,7 +22,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    const mailtoLink = `mailto:impresa.michielan@gmail.com?subject=Richiesta Sopralluogo Gratuito&body=Nome: ${formData.name}%0D%0ACittà: ${formData.city}%0D%0AEmail: ${formData.email}%0D%0ATelefono: ${formData.phone}%0D%0A%0D%0AMessaggio:%0D%0A${formData.message}`
+    const mailtoLink = `mailto:info@impresamichielan.com?subject=Richiesta Sopralluogo Gratuito&body=Nome: ${formData.name}%0D%0ACittà: ${formData.city}%0D%0AEmail: ${formData.email}%0D%0ATelefono: ${formData.phone}%0D%0A%0D%0AMessaggio:%0D%0A${formData.message}`
     window.location.href = mailtoLink
     onClose()
   }

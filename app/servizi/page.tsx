@@ -19,7 +19,7 @@ export default function ServiziPage() {
       icon: Home,
       title: 'Restauri e Pitture Edili',
       description: 'Offriamo soluzioni complete per il restauro e la pittura di edifici storici e moderni. Utilizziamo tecniche all\'avanguardia e materiali di altissima qualità per garantire risultati duraturi ed esteticamente impeccabili.',
-      image: '/images/WhatsApp Image 2026-06-11 at 10.50.10 PM (1).jpeg',
+      image: '/images/gallery/restauri/restauri-01.jpg',
       features: ['Facciate esterne', 'Pitture interne', 'Materiali certificati'],
       details: [
         'Ripristino intonaci degradati',
@@ -33,7 +33,7 @@ export default function ServiziPage() {
       icon: Shield,
       title: 'Isolamenti e Cappotti',
       description: 'L\'isolamento termico è fondamentale per il comfort abitativo e il risparmio energetico. Realizziamo sistemi a cappotto e isolamenti a basso spessore utilizzando materiali innovativi.',
-      image: '/images/WhatsApp Image 2026-06-11 at 10.50.24 PM (1).jpeg',
+      image: '/images/gallery/restauri/restauri-02.jpg',
       features: ['Cappotti termici', 'Anti-umidità', 'Risparmio energetico'],
       details: [
         'Isolamento pareti esterne ed interne',
@@ -47,7 +47,7 @@ export default function ServiziPage() {
       icon: Hammer,
       title: 'Rifacimento Tetti e Terrazzi',
       description: 'Proteggiamo la tua casa dalle intemperie con interventi specializzati su tetti e terrazzi. Dalla riparazione localizzata al rifacimento completo, garantiamo impermeabilizzazione totale.',
-      image: '/images/WhatsApp Image 2026-06-11 at 10.50.16 PM (2).jpeg',
+      image: '/images/gallery/tetti/tetti-01.jpg',
       features: ['Tetti tradizionali', 'Impermeabilizzazioni', 'Lattoneria'],
       details: [
         'Posa tegole e coppi',
@@ -60,14 +60,14 @@ export default function ServiziPage() {
       id: 'cartongessi',
       icon: Layers,
       title: 'Cartongessi e Contropareti',
-      description: 'Il cartongesso permette di ridisegnare gli spazi in modo rapido e pulito. Realizziamo contropareti isolanti, controsoffitti moderni e soluzioni acustiche per ogni ambiente.',
-      image: '/images/WhatsApp Image 2026-06-11 at 10.50.26 PM (2).jpeg',
-      features: ['Pareti divisorie', 'Controsoffitti', 'Isolamento acustico'],
+      description: 'Il cartongesso permette di ridisegnare gli spazi in modo rapido e pulito. Realizziamo contropareti isolanti, controsoffitti moderni e soluzioni strutturali per ogni ambiente.',
+      image: '/images/gallery/interni/interni-01.jpg',
+      features: ['Controsoffitti', 'Design personalizzato', 'Illuminazione LED'],
       details: [
-        'Pareti curve e design personalizzato',
+        'Controsoffitti moderni con LED integrati',
         'Integrazione illuminazione LED',
-        'Controsoffitti radianti e acustici',
-        'Lavorazioni ignifughe e idrorepellenti'
+        'Lavorazioni ignifughe e idrorepellenti',
+        'Finiture di pregio personalizzate'
       ]
     },
     {
@@ -75,7 +75,7 @@ export default function ServiziPage() {
       icon: Award,
       title: 'Materiali Innovativi in Esclusiva',
       description: 'Siamo partner ufficiali per la posa di materiali rivoluzionari come BASALTEK e IZONIL. Soluzioni vulcaniche naturali per un\'edilizia sana, sicura e sostenibile.',
-      image: 'https://www.impresamichielan.com/wp-content/uploads/2025/11/izonilogo.avif',
+      image: '/images/hero/basaltek-application.jpg',
       features: ['IZONIL impermeabile', 'Fibra di basalto', 'Certificati'],
       details: [
         'Applicazione intonaci deumidificanti IZONIL',
@@ -89,7 +89,7 @@ export default function ServiziPage() {
       icon: Key,
       title: 'Ristrutturazioni Complete Chiavi in Mano',
       description: 'Ci occupiamo di tutto noi. Dalla progettazione alla scelta dei materiali, fino alla consegna chiavi in mano. Un unico referente per una ristrutturazione senza stress.',
-      image: '/images/WhatsApp Image 2026-06-11 at 10.50.10 PM.jpeg',
+      image: '/images/gallery/restauri/restauri-03.jpg',
       features: ['Chiavi in mano', 'Supervisione totale', 'Materiali certificati'],
       details: [
         'Coordinamento maestranze',

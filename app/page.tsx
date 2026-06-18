@@ -35,7 +35,7 @@ export default function HomePage() {
       id: 'restauri',
       title: 'Restauri e Pitture Edili',
       description: 'Offriamo soluzioni complete per il restauro e la pittura di edifici storici e moderni. Utilizziamo tecniche all\'avanguardia e materiali di altissima qualità per garantire risultati duraturi ed esteticamente impeccabili.',
-      image: '/images/WhatsApp Image 2026-06-11 at 10.50.10 PM (1).jpeg',
+      image: '/images/gallery/restauri/restauri-01.jpg',
       features: ['Facciate esterne', 'Pitture interne', 'Materiali certificati'],
       details: [
         'Ripristino intonaci degradati',
@@ -49,7 +49,7 @@ export default function HomePage() {
       id: 'isolamenti',
       title: 'Isolamenti e Cappotti',
       description: 'L\'isolamento termico è fondamentale per il comfort abitativo e il risparmio energetico. Realizziamo sistemi a cappotto e isolamenti a basso spessore utilizzando materiali innovativi.',
-      image: '/images/WhatsApp Image 2026-06-11 at 10.50.24 PM (1).jpeg',
+      image: '/images/gallery/restauri/restauri-02.jpg',
       features: ['Cappotti termici', 'Anti-umidità', 'Risparmio energetico'],
       details: [
         'Isolamento pareti esterne ed interne',
@@ -63,7 +63,7 @@ export default function HomePage() {
       id: 'tetti',
       title: 'Rifacimento Tetti',
       description: 'Proteggiamo la tua casa dalle intemperie con interventi specializzati su tetti e terrazzi. Dalla riparazione localizzata al rifacimento completo, garantiamo impermeabilizzazione totale.',
-      image: '/images/WhatsApp Image 2026-06-11 at 10.50.16 PM (2).jpeg',
+      image: '/images/gallery/tetti/tetti-01.jpg',
       features: ['Tetti tradizionali', 'Impermeabilizzazioni', 'Lattoneria'],
       details: [
         'Posa tegole e coppi',
@@ -75,23 +75,23 @@ export default function HomePage() {
     },
     {
       id: 'cartongessi',
-      title: 'Cartongessi',
-      description: 'Il cartongesso permette di ridisegnare gli spazi in modo rapido e pulito. Realizziamo contropareti isolanti, controsoffitti moderni e soluzioni acustiche per ogni ambiente.',
-      image: '/images/WhatsApp Image 2026-06-11 at 10.50.26 PM (2).jpeg',
-      features: ['Pareti divisorie', 'Controsoffitti', 'Isolamento acustico'],
+      title: 'Cartongessi e Contropareti',
+      description: 'Il cartongesso permette di ridisegnare gli spazi in modo rapido e pulito. Realizziamo contropareti isolanti, controsoffitti moderni e soluzioni strutturali per ogni ambiente.',
+      image: '/images/gallery/interni/interni-01.jpg',
+      features: ['Controsoffitti', 'Design personalizzato', 'Illuminazione LED'],
       details: [
-        'Pareti curve e design personalizzato',
+        'Controsoffitti moderni con LED integrati',
         'Integrazione illuminazione LED',
-        'Controsoffitti radianti e acustici',
-        'Lavorazioni ignifughe e idrorepellenti'
+        'Lavorazioni ignifughe e idrorepellenti',
+        'Finiture di pregio personalizzate'
       ],
-      icon: HomeIcon
+      icon: Layers
     },
     {
       id: 'materiali',
       title: 'Materiali Innovativi',
       description: 'Pannelli in fibra di basalto BASALTEK e intonaci IZONIL per un ambiente salubre e sostenibile.',
-      image: '/images/WhatsApp Image 2026-06-11 at 10.50.25 PM.jpeg',
+      image: '/images/hero/basaltek-application.jpg',
       features: ['Fibra di basalto', 'IZONIL impermeabile', 'Certificati'],
       details: [
         'Sistemi in fibra di basalto BASALTEK',
@@ -105,7 +105,7 @@ export default function HomePage() {
       id: 'ristrutturazioni',
       title: 'Ristrutturazioni Complete',
       description: 'Ci occupiamo di tutto noi. Dalla progettazione alla scelta dei materiali, fino alla consegna chiavi in mano. Un unico referente per una ristrutturazione senza stress.',
-      image: '/images/WhatsApp Image 2026-06-11 at 10.50.10 PM.jpeg',
+      image: '/images/gallery/restauri/restauri-03.jpg',
       features: ['Chiavi in mano', 'Supervisione totale', 'Materiali certificati'],
       details: [
         'Coordinamento maestranze',
@@ -164,25 +164,25 @@ export default function HomePage() {
 
   const AUTHENTIC_PROJECTS = [
     {
-      title: 'Rifacimento Tetto',
-      description: 'Sostituzione integrale della copertura con nuove tegole e isolamento ventilato.',
-      imageBefore: '/beforeafter/WhatsApp Image 2026-06-11 at 10.50.11 PM (2).jpeg',
-      imageAfter: '/beforeafter/WhatsApp Image 2026-06-11 at 10.50.12 PM.jpeg',
-      tag: 'Tetto'
+      title: 'Idropulizia Facciate',
+      description: 'Risanamento estetico profondo tramite idropulizia professionale.',
+      imageBefore: '/images/before-after/idropulizia-before.jpg',
+      imageAfter: '/images/before-after/idropulizia-after.jpg',
+      tag: 'Facciate'
     },
     {
-      title: 'Restauro Facciate',
-      description: 'Risanamento pareti esterne con finiture traspiranti ad alta protezione.',
-      imageBefore: '/beforeafter/WhatsApp Image 2026-06-11 at 10.50.13 PM (1).jpeg',
-      imageAfter: '/beforeafter/WhatsApp Image 2026-06-11 at 10.50.13 PM.jpeg',
-      tag: 'Restauro'
+      title: 'Idrolavaggio Tetti',
+      description: 'Rimozione muschi e sedimenti per riportare le tegole al colore originale.',
+      imageBefore: '/images/before-after/idrolavaggio-before.jpg',
+      imageAfter: '/images/before-after/idrolavaggio-after.jpg',
+      tag: 'Tetti'
     },
     {
-      title: 'Impermeabilizzazione',
-      description: 'Protezione definitiva delle superfici esterne e nuova pavimentazione.',
-      imageBefore: '/beforeafter/WhatsApp Image 2026-06-11 at 10.50.18 PM (3).jpeg',
-      imageAfter: '/beforeafter/WhatsApp Image 2026-06-11 at 10.50.19 PM.jpeg',
-      tag: 'Terrazza'
+      title: 'Pavimentazione Esterna',
+      description: 'Posa di pavimentazione in pietra su sottofondo grezzo.',
+      imageBefore: '/images/before-after/pavimento-before.jpg',
+      imageAfter: '/images/before-after/pavimento-after.jpg',
+      tag: 'Pavimenti'
     },
   ]
 
@@ -197,13 +197,13 @@ export default function HomePage() {
       <section className="relative h-screen flex items-center justify-center text-white overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://www.impresamichielan.com/wp-content/uploads/2025/11/SFONDO-HOME-IMPRESA-MICHIELAN.jpg"
-            alt="Impresa Michielan"
+            src="/images/hero/hero-main.jpg"
+            alt="Impresa Michielan - Restauro e Costruzioni"
             fill
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/85 to-black/70" />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/70 to-black/60" />
         </div>
 
         <div className="relative z-10 container mx-auto px-4 py-8 mt-48 lg:mt-56 max-h-screen overflow-y-auto">
@@ -251,24 +251,31 @@ export default function HomePage() {
       </section>
 
       {/* ─── Trust Badges ─────────────────────────────────────────────────────── */}
-      <section className="py-8 bg-white border-b">
+      <section className="py-12 bg-white border-b relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-cta to-primary opacity-20" />
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap items-center justify-center gap-8 text-center">
-            <div className="flex items-center gap-2">
-              <Award className="w-6 h-6 text-cta" />
-              <span className="font-semibold">Certificazione SOA23</span>
+          <div className="flex flex-wrap items-center justify-center gap-12 text-center">
+            <div className="flex items-center gap-4 group">
+              <div className="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                <Award className="w-8 h-8 text-primary group-hover:text-white" />
+              </div>
+              <div className="text-left">
+                <p className="text-[10px] uppercase tracking-widest text-text/40 font-bold">Certificazione Gold</p>
+                <p className="text-xl font-black text-primary">SOA23 • OG1</p>
+              </div>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="h-12 w-px bg-gray-100 hidden md:block" />
+            <div className="flex items-center gap-3">
               <Shield className="w-6 h-6 text-cta" />
-              <span className="font-semibold">Materiali Certificati</span>
+              <span className="font-bold text-lg text-primary">Materiali Certificati</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3">
               <Star className="w-6 h-6 text-yellow-400 fill-yellow-400" />
-              <span className="font-semibold">Numerose Recensioni 5 Stelle</span>
+              <span className="font-bold text-lg text-primary">Recensioni 5 Stelle</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3">
               <Clock className="w-6 h-6 text-cta" />
-              <span className="font-semibold">Risposta in 24h</span>
+              <span className="font-bold text-lg text-primary">Risposta Rapida 24h</span>
             </div>
           </div>
         </div>
@@ -406,6 +413,70 @@ export default function HomePage() {
               Vedi tutte le opere
               <ArrowRight className="w-5 h-5" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Materiali Innovativi Section ────────────────────────────────────────── */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <span className="text-cta font-bold uppercase tracking-[0.2em] text-sm mb-4 block">Esclusiva e Tecnologia</span>
+            <h2 className="text-5xl font-black text-primary mb-6">Materiali Innovativi</h2>
+            <p className="text-xl text-text/70">
+              Siamo partner ufficiali e posatori certificati di tecnologie rivoluzionarie per un&apos;edilizia sana, sicura e duratura.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* BASALTEK */}
+            <div className="group bg-emerald-950 p-12 rounded-[3.5rem] shadow-xl hover:shadow-2xl transition-all duration-500 relative overflow-hidden">
+               <div className="relative z-10">
+                  <div className="flex justify-between items-start mb-8">
+                     <h3 className="text-5xl font-black text-white tracking-tighter">BASALTEK</h3>
+                     <div className="bg-white/10 px-4 py-1 rounded-full text-[10px] font-bold text-emerald-400 uppercase tracking-widest border border-white/10">Flagship Product</div>
+                  </div>
+                  <p className="text-lg text-white/80 mb-10 leading-relaxed">
+                    Fibra di basalto vulcanico per isolamento termico e rinforzi strutturali. Incombustibile, naturale e 100% riciclabile.
+                  </p>
+                  <ul className="space-y-4 mb-10">
+                    {['Isolamento termico superiore', 'Incombustibile Classe A1', 'Resistenza meccanica estrema'].map((item, i) => (
+                      <li key={i} className="flex items-center gap-3 text-white font-semibold">
+                        <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link href="/basaltek" className="inline-flex items-center gap-2 bg-white text-emerald-950 px-8 py-4 rounded-2xl font-bold hover:bg-emerald-50 transition-all group-hover:gap-4">
+                    Approfondisci <ArrowRight className="w-5 h-5" />
+                  </Link>
+               </div>
+               <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl group-hover:bg-emerald-500/20 transition-all" />
+            </div>
+
+            {/* IZONIL */}
+            <div className="group bg-background p-12 rounded-[3.5rem] shadow-xl hover:shadow-2xl transition-all duration-500 relative overflow-hidden border border-gray-100">
+               <div className="relative z-10">
+                  <div className="flex justify-between items-start mb-8">
+                     <h3 className="text-5xl font-black text-primary tracking-tighter">IZONIL</h3>
+                     <div className="bg-primary/5 px-4 py-1 rounded-full text-[10px] font-bold text-cta uppercase tracking-widest border border-primary/5">Umidità Risalita</div>
+                  </div>
+                  <p className="text-lg text-text/70 mb-10 leading-relaxed">
+                    L&apos;unico intonaco al mondo 100% impermeabile e traspirante. La soluzione definitiva contro l&apos;umidità di risalita.
+                  </p>
+                  <ul className="space-y-4 mb-10">
+                    {['Impermeabilità totale 100%', 'Traspirabilità certificata', 'Stop umidità di risalita'].map((item, i) => (
+                      <li key={i} className="flex items-center gap-3 text-primary font-semibold">
+                        <CheckCircle className="w-5 h-5 text-cta flex-shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="flex items-center gap-4">
+                     <Image src="/images/logos/izonil.png" alt="Izonil Logo" width={100} height={40} className="object-contain" />
+                  </div>
+               </div>
+            </div>
           </div>
         </div>
       </section>

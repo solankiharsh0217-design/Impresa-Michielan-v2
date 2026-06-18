@@ -19,7 +19,7 @@ export default function ContattiPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    const mailtoLink = `mailto:impresa.michielan@gmail.com?subject=Richiesta Contatto&body=Nome: ${formData.name}%0D%0ACittà: ${formData.city}%0D%0AEmail: ${formData.email}%0D%0ATelefono: ${formData.phone}%0D%0A%0D%0AMessaggio:%0D%0A${formData.message}`
+    const mailtoLink = `mailto:info@impresamichielan.com?subject=Richiesta Contatto&body=Nome: ${formData.name}%0D%0ACittà: ${formData.city}%0D%0AEmail: ${formData.email}%0D%0ATelefono: ${formData.phone}%0D%0A%0D%0AMessaggio:%0D%0A${formData.message}`
     window.location.href = mailtoLink
   }
 
@@ -160,7 +160,7 @@ export default function ContattiPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-primary mb-2 text-lg">Email</h3>
-                      <a href="mailto:impresa.michielan@gmail.com" className="text-text/70 hover:text-cta transition-colors">impresa.michielan@gmail.com</a>
+                      <a href="mailto:info@impresamichielan.com" className="text-text/70 hover:text-cta transition-colors">info@impresamichielan.com</a>
                     </div>
                   </div>
 
