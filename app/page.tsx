@@ -34,7 +34,7 @@ export default function HomePage() {
       id: 'restauri',
       title: 'Restauri e Pitture Edili',
       description: 'Offriamo soluzioni complete per il restauro e la pittura di edifici storici e moderni. Utilizziamo tecniche all\'avanguardia e materiali di altissima qualità per garantire risultati duraturi ed esteticamente impeccabili.',
-      image: '/images/before-after/idropulizia-facciate-after.jpg',
+      image: '/images/services/restauri-main.jpg',
       features: ['Facciate esterne', 'Pitture interne', 'Materiali certificati'],
       details: [
         'Ripristino intonaci degradati',

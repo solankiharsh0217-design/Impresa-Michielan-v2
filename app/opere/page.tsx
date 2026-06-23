@@ -78,7 +78,7 @@ export default function OperePage() {
       id: 'ba2',
       title: 'Rifacimento Tetto in Tegole',
       category: 'Tetti',
-      location: 'Scorzè (VE)',
+      location: 'Spinea (VE)',
       description: 'Sostituzione e rifacimento del manto di copertura con nuove tegole e colmi.',
       before: '/images/before-after/idrolavaggio-before.jpg',
       after: '/images/before-after/idrolavaggio-after.jpg'
